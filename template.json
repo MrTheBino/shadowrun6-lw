@@ -1,0 +1,231 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        },
+        "edge": {
+          "value": 0,
+          "min": 0,
+          "max": 10
+        },
+        "power": {
+          "value": 5,
+          "min": 0,
+          "max": 5
+        },
+        "cm_physical":{
+          "value": 0,
+          "min": 0,
+          "max": 100
+        },
+        "cm_stun":{
+          "value": 0,
+          "min": 0,
+          "max": 100
+        },
+        "biography": ""
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "attributes": {
+        "edge_points":{
+          "value": 0
+        },
+        "unarmed_ar":{
+          "value": 0
+        },
+        "magic_resonance":{
+          "value": 0
+        },
+        "matrix_initiative": {
+          "value": 0
+        },
+        "astral_initiative": {
+          "value": 0
+        },
+        "composure": {
+          "value": 0
+        },
+        "judge_intentions": {
+          "value": 0
+        },
+        "memory": {
+          "value": 0
+        },
+        "lift_carry": {
+          "value": 0
+        },
+        "defense_rating": {
+          "value": 0
+        },
+        "body":{
+          "value": 0
+        },
+        "agility":{
+          "value": 0
+        },
+        "reaction":{
+          "value": 0
+        },
+        "strength":{
+          "value": 0
+        },
+        "willpower":{
+          "value": 0
+        },
+        "logic":{
+          "value": 0
+        },
+        "intuition":{
+          "value": 0
+        },
+        "charisma":{
+          "value": 0
+        },
+        "movement": {
+          "value": 0
+        },
+        "initiative": {
+          "value": 0
+        },
+        "essence":{
+          "value": 0
+        }
+      },
+      "misc": {
+        "primary_lifestyle": "",
+        "nuyen": "",
+        "licenses": "",
+        "fake_ids_etc": "",
+        "name_primary_alias": "",
+        "metatype": "",
+        "ethnicity": "",
+        "age": "",
+        "sex": "",
+        "height": "",
+        "weight": "",
+        "reputation": "",
+        "heat": "",
+        "karma": 0,
+        "total_karma": 0
+      }
+    },
+    "npc": {
+      "templates": ["base"],
+      "cr": 0,
+      "attributes":{
+        "body":{
+          "value": 0
+        },
+        "agility":{
+          "value": 0
+        },
+        "reaction":{
+          "value": 0
+        },
+        "strength":{
+          "value": 0
+        },
+        "willpower":{
+          "value": 0
+        },
+        "logic":{
+          "value": 0
+        },
+        "intuition":{
+          "value": 0
+        },
+        "charisma":{
+          "value": 0
+        },
+        "movement": {
+          "value": 0
+        },
+        "initiative": {
+          "value": 0
+        },
+        "matrix_initiative": {
+          "value": 0
+        },
+        "astral_initiative": {
+          "value": 0
+        },
+        "essence":{
+          "value": 0
+        },
+        "magic":{
+          "value": 0
+        },
+        "resonance":{
+          "value": 0
+        }
+      }
+    }
+  },
+  "Item": {
+    "types": ["item", "feature", "spell","skill","ranged_weapon","melee_weapon","armor","contact"],
+    "templates": {
+      "base": {
+        "description": ""
+      }
+    },
+    "skill":{
+      "templates": ["base"],
+      "skill_rank": 0,
+      "skill_attribute":"",
+      "skill_type": ""
+    },
+    "item": {
+      "templates": ["base"],
+      "quantity": 1,
+      "weight": 0,
+      "formula": "d20 + @str.mod + ceil(@lvl / 2)"
+    },
+    "ranged_weapon":{
+      "templates": ["base"],
+      "weapon_damage": "",
+      "weapon_mode": "",
+      "weapon_r_close": "",
+      "weapon_r_near": "",
+      "weapon_r_far": "",
+      "weapon_r_extreme": "",
+      "weapon_ammo": ""
+    },
+    "armor": {
+      "templates": ["base"],
+      "armor_rating": 0
+    },
+    "gear": {
+      "templates": ["base"],
+      "rating": 0
+    },
+    "augmentation":{
+      "templates":["base"],
+      "rating": 0,
+      "essence": 0
+    },
+    "contacts": {
+      "templates": ["base"],
+      "loyality": 0,
+      "connection": 0
+    },
+    "melee_weapon": {
+      "templates": ["base"],
+      "weapon_damage": "",
+      "weapon_r_close": ""
+    },
+    "feature": {
+      "templates": ["base"]
+    },
+    "spell": {
+      "templates": ["base"],
+      "spellLevel": 1
+    }
+  }
+}

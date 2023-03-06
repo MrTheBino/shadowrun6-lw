@@ -1,0 +1,88 @@
+<div class="grid grid-2col">
+    <div>
+        <h1>Personal Data</h1>
+        <div class="grid grid-2col">
+            <label for="system.misc.name_primary_alias" class="resource-label">NAME/PRIMARY ALIAS</label>
+            <input type="text" name="system.misc.name_primary_alias" value="{{system.misc.name_primary_alias}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.metatype" class="resource-label">Metatype</label>
+            <input type="text" name="system.misc.metatype" value="{{system.misc.metatype}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.ethnicity" class="resource-label">Ethnicity</label>
+            <input type="text" name="system.misc.ethnicity" value="{{system.misc.ethnicity}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.age" class="resource-label">Age</label>
+            <input type="text" name="system.misc.age" value="{{system.misc.age}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.sex" class="resource-label">Sex</label>
+            <input type="text" name="system.misc.sex" value="{{system.misc.sex}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-4col">
+            <label for="system.misc.height" class="resource-label">Height</label>
+            <input type="text" name="system.misc.height" value="{{system.misc.height}}" data-dtype="String"/>
+            <label for="system.misc.weight" class="resource-label">Weight</label>
+            <input type="text" name="system.misc.weight" value="{{system.misc.weight}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.reputation" class="resource-label">Reputation</label>
+            <input type="text" name="system.misc.reputation" value="{{system.misc.reputation}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-2col">
+            <label for="system.misc.heat" class="resource-label">Heat</label>
+            <input type="text" name="system.misc.heat" value="{{system.misc.heat}}" data-dtype="String"/>
+        </div>
+        <div class="grid grid-4col">
+            <label for="system.misc.karma" class="resource-label">Karma</label>
+            <input type="text" name="system.misc.karma" value="{{system.misc.karma}}" data-dtype="Number"/>
+            <label for="system.misc.total_karma" class="resource-label">Total Karma</label>
+            <input type="text" name="system.misc.total_karma" value="{{system.misc.total_karma}}" data-dtype="Number"/>
+        </div>
+    </div>
+    <div>
+        <h1>Contacts</h1>
+        <ol class="items-list">
+            <li class="item flexrow items-header">
+              <div class="item-name">Name</div>
+              <div class="item-name">Rating</div>
+              <div class="item-controls">
+                <a class="item-control item-create" title="Create item" data-type="contact"><i class="fas fa-plus"></i></a>
+              </div>
+            </li>
+            {{#each contacts as |item id|}}
+              <li class="item flexrow" data-item-id="{{item._id}}">
+                <div class="item-name">
+                  <h4>{{item.name}}</h4>
+                </div>
+                <div>{{item.system.loyality}}</div>
+                <div class="item-controls">
+                  <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+                  <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+                </div>
+              </li>
+            {{/each}}
+          </ol>
+    </div>
+</div>
+<div>
+  <h1>IDs / LIFESTYLES / CURRENCY</h1>
+  <div class="grid grid-2col">
+    <label for="system.misc.primary_lifestyle" class="resource-label">Primary Lifestyle</label>
+    <input type="text" name="system.misc.primary_lifestyle" value="{{system.misc.primary_lifestyle}}" data-dtype="String"/>
+  </div>
+  <div class="grid grid-2col">
+    <label for="system.misc.nuyen" class="resource-label">Nuyen</label>
+    <input type="text" name="system.misc.nuyen" value="{{system.misc.nuyen}}" data-dtype="Number"/>
+  </div>
+  <div class="grid grid-2col">
+    <label for="system.misc.licenses" class="resource-label">Licenses</label>
+    <input type="text" name="system.misc.licenses" value="{{system.misc.licenses}}" data-dtype="String"/>
+  </div>
+  <div class="grid grid-2col">
+    <label for="system.misc.fake_ids_etc" class="resource-label">Fake IDs / Related Lifestyles / Funds / Licenses</label>
+    <input type="text" name="system.misc.fake_ids_etc" value="{{system.misc.fake_ids_etc}}" data-dtype="String"/>
+  </div>
+</div>

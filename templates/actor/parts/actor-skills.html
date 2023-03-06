@@ -1,0 +1,32 @@
+<h2>Skills</h2>
+<ol class="items-list">
+  <li class="item flexrow items-header">
+    <div class="item-name">Name</div>
+    <div class="item-name">Rank</div>
+    <div class="item-name">Attr</div>
+    <div class="item-name">Type</div>
+    <div class="item-controls">
+      <a class="item-control item-create" title="Add Skill" data-type="skill"><i class="fas fa-plus"></i> Add Skill</a>
+    </div>
+  </li>
+  {{#each skills as |skill_entry id|}}
+    <li class="item flexrow" data-item-id="{{skill_entry._id}}">
+      <div class="item-name">
+        <h4>{{skill_entry.name}}</h4>
+      </div>
+      <div class="item-skill-rank">
+        {{skill_entry.system.skill_rank}}
+      </div>
+      <div class="item-skill-attribute">
+        {{skill_entry.system.skill_attribute}}
+      </div>
+      <div class="item-skill-type">
+        {{skill_entry.system.skill_type}}
+      </div>
+      <div class="item-controls">
+        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+      </div>
+    </li>
+  {{/each}}
+</ol>

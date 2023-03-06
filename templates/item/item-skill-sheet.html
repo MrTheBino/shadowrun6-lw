@@ -1,0 +1,27 @@
+<form class="{{cssClass}}" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+     <section class="grid grid-3col">
+        <div class="flexcol">Rank</div>
+        <div class="flexcol">Attribute</div>
+        <div class="flexcol">Type</div>
+    </section>
+    <section class="grid grid-3col">
+      <div class="flexcol"><input type="text" name="system.rank" value="{{system.rank}}" data-dtype="Number"/></div>
+      <div class="flexcol"><input type="text" name="system.skill_attribute" value="{{system.skill_attribute}}" data-dtype="String"/></div>
+      <div class="flexcol"><input type="text" name="system.skill_type" value="{{system.skill_type}}" data-dtype="String"/></div>
+    </section>
+    
+
+    {{editor system.description target="system.description" rollData=rollData button=true owner=owner editable=editable}}
+        
+  </section>
+
+</form>
