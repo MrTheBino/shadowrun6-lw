@@ -21,12 +21,12 @@
         "cm_physical":{
           "value": 0,
           "min": 0,
-          "max": 100
+          "max": 8
         },
         "cm_stun":{
           "value": 0,
           "min": 0,
-          "max": 100
+          "max": 8
         },
         "biography": ""
       }

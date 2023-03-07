@@ -10,6 +10,24 @@
   cursor: pointer;
 }
 
+.cm_box {
+  background-color: green;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.green{
+  background-color: green;
+}
+
+.red{
+  background-color: red;
+}
+
 .grid,
 .grid-2col {
   display: grid;

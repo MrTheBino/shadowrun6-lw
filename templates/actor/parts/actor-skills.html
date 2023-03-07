@@ -12,7 +12,7 @@
   {{#each skills as |skill_entry id|}}
     <li class="item flexrow" data-item-id="{{skill_entry._id}}">
       <div class="item-name" >
-        <label class="rollable" data-roll="({{skill_entry.system.skill_rank}}+@{{skill_entry.system.skill_attribute}}.value)d6">{{skill_entry.name}}</label>
+        <label class="rolldialog" data-roll="({{skill_entry.system.skill_rank}}+@{{skill_entry.system.skill_attribute}}.value)">{{skill_entry.name}}</label>
       </div>
       <div class="item-skill-rank">
         {{skill_entry.system.skill_rank}}

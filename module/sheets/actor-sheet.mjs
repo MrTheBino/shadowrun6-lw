@@ -1,5 +1,5 @@
 import {onManageActiveEffect, prepareActiveEffectCategories} from "../helpers/effects.mjs";
-
+import {showSR6RollDialog} from "../helpers/roller.mjs";
 /**
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
@@ -201,6 +201,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
 
     // Rollable abilities.
     html.find('.rollable').click(this._onRoll.bind(this));
+    html.find('.rolldialog').click(this._onRollDialog.bind(this));
 
     // Drag events for macros.
     if (this.actor.isOwner) {
@@ -240,6 +241,14 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     return await Item.create(itemData, {parent: this.actor});
   }
 
+  _onRollDialog(event) {
+    event.preventDefault();
+    const element = event.currentTarget;
+    const dataset = element.dataset;
+
+    console.log(dataset.roll);
+    showSR6RollDialog(dataset.roll);
+  }
   /**
    * Handle clickable rolls.
    * @param {Event} event   The originating click event
