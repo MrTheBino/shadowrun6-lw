@@ -10,7 +10,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["shadowrun6", "sheet", "actor"],
-      template: "systems/shadowrun6/templates/actor/actor-sheet.html",
+      template: "systems/shadowrun6-lw/templates/actor/actor-sheet.html",
       width: 700,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
@@ -19,7 +19,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/shadowrun6/templates/actor/actor-${this.actor.type}-sheet.html`;
+    return `systems/shadowrun6-lw/templates/actor/actor-${this.actor.type}-sheet.html`;
   }
 
   /* -------------------------------------------- */
@@ -84,6 +84,10 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     // Initialize containers.
     const skills = [];
     const gear = [];
+    const augmentations = [];
+    const qualities = [];
+    const adept_powers = [];
+    const magic_spells = [];
     const ranged_weapons = [];
     const melee_weapons = [];
     const features = [];
@@ -106,8 +110,11 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     for (let i of context.items) {
       i.img = i.img || DEFAULT_TOKEN;
       // Append to gear.
-      if (i.type === 'item') {
+      if (i.type === 'gear') {
         gear.push(i);
+      }
+      if (i.type === 'augmentation') {
+        augmentations.push(i);
       }
       // Append to features.
       else if (i.type === 'feature') {
@@ -129,6 +136,15 @@ export class Shadowrun6ActorSheet extends ActorSheet {
       else if (i.type === 'contact') {
         contacts.push(i);
       }
+      else if (i.type === 'quality') {
+        qualities.push(i);
+      }
+      else if (i.type === 'adept_power') {
+        adept_powers.push(i);
+      }
+      else if (i.type === 'magic_spell') {
+        magic_spells.push(i);
+      }
       // Append to spells.
       else if (i.type === 'spell') {
         if (i.system.spellLevel != undefined) {
@@ -139,9 +155,13 @@ export class Shadowrun6ActorSheet extends ActorSheet {
 
     // Assign and return
     context.gear = gear;
+    context.augmentations = augmentations;
     context.features = features;
     context.spells = spells;
     context.skills = skills;
+    context.magic_spells = magic_spells;
+    context.qualities = qualities;
+    context.adept_powers = adept_powers;
     context.ranged_weapons = ranged_weapons;
     context.melee_weapons = melee_weapons;
     context.equipment_armor = equipment_armor;

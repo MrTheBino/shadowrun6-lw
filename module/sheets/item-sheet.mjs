@@ -16,7 +16,7 @@ export class Shadowrun6ItemSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/shadowrun6/templates/item";
+    const path = "systems/shadowrun6-lw/templates/item";
     // Return a single sheet for all item types.
     // return `${path}/item-sheet.html`;
 

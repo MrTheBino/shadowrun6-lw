@@ -98,6 +98,32 @@
           "value": 0
         }
       },
+      "matrix": {
+        "attack": "",
+        "sleaze": "",
+        "data_processing": "",
+        "firewall": "",
+        "device_rating": 0,
+        "programs": "",
+        "condition_monitor":{
+          "value": 0,
+          "min": 0,
+          "max": 12
+        }
+      },
+      "vehicle":{
+        "name": "",
+        "handling": 0,
+        "acceleration": 0,
+        "speed_interval": 0,
+        "top_speed": 0,
+        "body":"",
+        "armor": 0,
+        "pilot": 0,
+        "sensor": 0,
+        "seats": 0,
+        "notes": ""
+      },
       "misc": {
         "primary_lifestyle": "",
         "nuyen": "",
@@ -169,7 +195,7 @@
     }
   },
   "Item": {
-    "types": ["item", "feature", "spell","skill","ranged_weapon","melee_weapon","armor","contact"],
+    "types": ["item", "feature", "spell","skill","ranged_weapon","melee_weapon","armor","contact","gear","augmentation","quality","adept_power","magic_spell"],
     "templates": {
       "base": {
         "description": ""
@@ -219,6 +245,22 @@
       "templates": ["base"],
       "weapon_damage": "",
       "weapon_r_close": ""
+    },
+    "quality": {
+      "templates": ["base"],
+      "type": ""
+    },
+    "adept_power": {
+      "templates": ["base"],
+      "level": 0
+    },
+    "magic_spell": {
+      "templates": ["base"],
+      "type_target": "",
+      "range": "",
+      "duration": "",
+      "drain": "",
+      "sprcf": ""
     },
     "feature": {
       "templates": ["base"]

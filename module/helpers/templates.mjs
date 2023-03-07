@@ -7,13 +7,14 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/shadowrun6/templates/actor/parts/actor-social.html",
-    "systems/shadowrun6/templates/actor/parts/actor-combat.html",
-    "systems/shadowrun6/templates/actor/parts/actor-skills.html",
-    "systems/shadowrun6/templates/actor/parts/actor-features.html",
-    "systems/shadowrun6/templates/actor/parts/actor-items.html",
-    "systems/shadowrun6/templates/actor/parts/actor-spells.html",
-    "systems/shadowrun6/templates/actor/parts/actor-effects.html",
-    "systems/shadowrun6/templates/actor/parts/actor-minion.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-equipment.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-social.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-combat.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-skills.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-features.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-items.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-spells.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-effects.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-minion.html",
   ]);
 };
