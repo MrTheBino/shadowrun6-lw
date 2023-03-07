@@ -45,6 +45,7 @@ export class Shadowrun6ItemSheet extends ItemSheet {
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
     context.flags = itemData.flags;
+    context.char_attributes  = game.system.template.Actor.character.attributes;
 
     return context;
   }

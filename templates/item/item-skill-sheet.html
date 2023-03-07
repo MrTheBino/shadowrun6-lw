@@ -14,8 +14,16 @@
         <div class="flexcol">Type</div>
     </section>
     <section class="grid grid-3col">
-      <div class="flexcol"><input type="text" name="system.rank" value="{{system.rank}}" data-dtype="Number"/></div>
-      <div class="flexcol"><input type="text" name="system.skill_attribute" value="{{system.skill_attribute}}" data-dtype="String"/></div>
+      <div class="flexcol"><input type="text" name="system.skill_rank" value="{{system.skill_rank}}" data-dtype="Number"/></div>
+      <div class="flexcol">
+        <select  class=""  name="system.skill_attribute"  data-type="String">
+          {{#select system.skill_attribute}}
+              {{#each char_attributes as |attr key|}}
+              <option  value="{{key}}">{{localizeAttribute key}}</option>
+              {{/each}}
+          {{/select}}
+      </select>
+      </div>
       <div class="flexcol"><input type="text" name="system.skill_type" value="{{system.skill_type}}" data-dtype="String"/></div>
     </section>
     

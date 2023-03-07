@@ -6,19 +6,19 @@
     <div class="item-name">Attr</div>
     <div class="item-name">Type</div>
     <div class="item-controls">
-      <a class="item-control item-create" title="Add Skill" data-type="skill"><i class="fas fa-plus"></i> Add Skill</a>
+      <a class="item-control item-create" title="Add Skill" data-type="skill"><i class="fas fa-plus"></i></a>
     </div>
   </li>
   {{#each skills as |skill_entry id|}}
     <li class="item flexrow" data-item-id="{{skill_entry._id}}">
-      <div class="item-name">
-        <h4>{{skill_entry.name}}</h4>
+      <div class="item-name" >
+        <label class="rollable" data-roll="({{skill_entry.system.skill_rank}}+@{{skill_entry.system.skill_attribute}}.value)d6">{{skill_entry.name}}</label>
       </div>
       <div class="item-skill-rank">
         {{skill_entry.system.skill_rank}}
       </div>
       <div class="item-skill-attribute">
-        {{skill_entry.system.skill_attribute}}
+        {{localizeAttribute skill_entry.system.skill_attribute}}
       </div>
       <div class="item-skill-type">
         {{skill_entry.system.skill_type}}

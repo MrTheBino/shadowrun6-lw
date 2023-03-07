@@ -68,6 +68,10 @@ Handlebars.registerHelper('toLowerCase', function(str) {
   return str.toLowerCase();
 });
 
+Handlebars.registerHelper('localizeAttribute', function(str) {
+  return game.i18n.localize(SHADOWRUN6.attributes_localization_matching[str]);
+});
+
 /* -------------------------------------------- */
 /*  Ready Hook                                  */
 /* -------------------------------------------- */
@@ -91,6 +95,8 @@ Hooks.once("ready", async function() {
     }
     return true;
    });
+
+   console.log(Object.keys(game.system.template.Actor.character.attributes));
 });
 
 /* -------------------------------------------- */
