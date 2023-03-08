@@ -20,6 +20,17 @@
             <span> / </span>
             <input type="text" name="system.cm_physical.max" value="{{system.cm_physical.max}}" data-dtype="Number"/>
           </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            {{#times system.cm_physical.max}} {{#if (lt @index
+            system.cm_physical.value)}}
+            <span class="cm_box green"></span>
+            {{else}}
+            <span class="cm_box red"></span>
+            {{/if}} {{/times}}
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            <div>Dice Pool Mod: {{system.dice_pool_mod}}</div>
+          </div>
         </div>
 
         <div class="resource flex-group-center">
@@ -28,6 +39,14 @@
             <input type="text" name="system.cm_stun.value" value="{{system.cm_stun.value}}" data-dtype="Number"/>
             <span> / </span>
             <input type="text" name="system.cm_stun.max" value="{{system.cm_stun.max}}" data-dtype="Number"/>
+          </div>
+          <div class="resource-content flexrow flex-center flex-between">
+            {{#times system.cm_stun.max}} {{#if (lt @index
+            system.cm_stun.value)}}
+            <span class="cm_box green"></span>
+            {{else}}
+            <span class="cm_box red"></span>
+            {{/if}} {{/times}}
           </div>
         </div>
 

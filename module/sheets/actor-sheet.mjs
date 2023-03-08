@@ -246,7 +246,6 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    console.log(dataset.roll);
     showSR6RollDialog(dataset.roll);
   }
   /**

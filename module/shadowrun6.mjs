@@ -8,6 +8,7 @@ import { Shadowrun6ItemSheet } from "./sheets/item-sheet.mjs";
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import {processRollResult,_caseInsensitiveReplace} from "./helpers/roller.mjs";
 import { SHADOWRUN6 } from "./helpers/config.mjs";
+import {ShadowCommandHelper} from "./helpers/shadow_command_helper.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -31,7 +32,7 @@ Hooks.once('init', async function() {
    * @type {String}
    */
   CONFIG.Combat.initiative = {
-    formula: "@attributes.initiative",
+    formula: "@attributes.initiative.value",
     decimals: 2
   };
 
@@ -45,6 +46,7 @@ Hooks.once('init', async function() {
   Items.unregisterSheet("core", ItemSheet);
   Items.registerSheet("shadowrun6", Shadowrun6ItemSheet, { makeDefault: true });
 
+  ShadowCommandHelper.install();
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
 });
