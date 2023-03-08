@@ -1,31 +1,33 @@
-<section class="grid grid-11col">
-    <div class="flexcol">K</div>
-    <div class="flexcol">G</div>
-    <div class="flexcol">R</div>
-    <div class="flexcol">S</div>
-    <div class="flexcol">W</div>
-    <div class="flexcol">L</div>
-    <div class="flexcol">I</div>
-    <div class="flexcol">C</div>
-    <div class="flexcol">M</div>
-    <div class="flexcol">ESS</div>
-    <div class="flexcol">RES</div>
-</section>
-<section class="grid grid-11col">
-  <div class="flexcol"><input type="text" name="system.attributes.body.value" value="{{system.attributes.body.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.agility.value" value="{{system.attributes.agility.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.reaction.value" value="{{system.attributes.reaction.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.willpower.value" value="{{system.attributes.willpower.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.logic.value" value="{{system.attributes.logic.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.intuition.value" value="{{system.attributes.intuition.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.magic.value" value="{{system.attributes.magic.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.essence.value" value="{{system.attributes.essence.value}}" data-dtype="Number"/></div>
-  <div class="flexcol"><input type="text" name="system.attributes.resonance.value" value="{{system.attributes.resonance.value}}" data-dtype="Number"/></div>
-</section>
+<div class="shadowrun6 styled_box">
+  <section class="grid grid-11col">
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeBody'}}">K</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeAgility'}}">G</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeReaction'}}">R</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeStrength'}}">S</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeWillpower'}}">W</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeLogic'}}">L</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeIntuition'}}">I</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeCharisma'}}">C</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeMagic'}}">M</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeEssence'}}">ESS</div>
+      <div class="flexcol" title="{{localize 'SHADOWRUN6.AttributeResonance'}}">RES</div>
+  </section>
+  <section class="grid grid-11col">
+    <div class="flexcol"><input type="text" name="system.attributes.body.value" value="{{system.attributes.body.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.agility.value" value="{{system.attributes.agility.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.reaction.value" value="{{system.attributes.reaction.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.strength.value" value="{{system.attributes.strength.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.willpower.value" value="{{system.attributes.willpower.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.logic.value" value="{{system.attributes.logic.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.intuition.value" value="{{system.attributes.intuition.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.charisma.value" value="{{system.attributes.charisma.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.magic.value" value="{{system.attributes.magic.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.essence.value" value="{{system.attributes.essence.value}}" data-dtype="Number"/></div>
+    <div class="flexcol"><input type="text" name="system.attributes.resonance.value" value="{{system.attributes.resonance.value}}" data-dtype="Number"/></div>
+  </section>
+</div>
 
-
+<div class="shadowrun6 styled_box">
 <section class="grid grid-3col">
   <div class="flexcol">
     <label for="system.attributes.initiative.value" class="resource-label rollable flexlarge align-left" data-roll="{{system.attributes.initiative.value}}" data-label="Initiative">Initiative</label></div>
@@ -37,5 +39,7 @@
   <div class="flexcol"><input type="text" name="system.attributes.matrix_initiative.value" value="{{system.attributes.matrix_initiative.value}}" data-dtype="String"/></div>
   <div class="flexcol"><input type="text" name="system.attributes.astral_initiative.value" value="{{system.attributes.astral_initiative.value}}" data-dtype="String"/></div>
 </section>
+</div>
 
+<h3>Description</h3>
 {{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}

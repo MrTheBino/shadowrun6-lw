@@ -22,6 +22,8 @@
   "SHADOWRUN6.AttributeLiftCarry": "Lift & Carry",
   "SHADOWRUN6.AttributeMovement": "Movement",
   "SHADOWRUN6.AttributeDefenseRating": "Defense Rating",
+  "SHADOWRUN6.AttributeMagic": "Magic",
+  "SHADOWRUN6.AttributeResonance": "Resonance",
 
   "SHADOWRUN6.AttributeLevelAbbr": "level",
   "SHADOWRUN6.AttributeBodyAbbr": "body",
@@ -64,16 +66,74 @@
     "AdeptPowersAndOthers": "Adept Powers and other abilities",
     "Qualities": "Qualities",
     "Contacts": "Contacts",
-    "PersonalData": "Personal Data"
+    "PersonalData": "Personal Data",
+    "Augmentation": "Augmentation",
+    "Gear": "Gear",
+    "Vehicle": "Vehicle"
+  },
+
+  "SHADOWRUN6.RollDialog":{
+    "D6DicePool": "D6 Dice Pool",
+    "PoolModNeg": "Negative Pool Mod",
+    "PoolModPos": "Positive Pool Mod"
+  },
+
+  "SHADOWRUN6.Vehicle": {
+    "name":"Vehicle",
+    "handling": "Handling",
+    "acceleration": "Acceleration",
+    "speed_interval": "Speed Interval",
+    "top_speed": "Top Speed",
+    "body": "Body",
+    "armor": "Armor",
+    "pilot": "Pilot",
+    "sensor": "Sensor",
+    "seats": "Seats"
+  },
+
+  "SHADOWRUN6.Matrix": {
+    "attack": "Attack",
+    "sleaze": "Sleaze",
+    "data_processing": "Data Proc",
+    "firewall": "Firewall",
+    "device_rating": "Device Rating/DR",
+    "programs"  : "Programs",
+    "condition_monitor": "Condition Monitor"
   },
 
   "SHADOWRUN6.Items":{
     "Armor":{
       "armor_rating": "Rating"
     },
+    "Skill":{
+      "skill_attribute": "Attribute",
+      "skill_rank": "Rank",
+      "skill_type": "Typ"
+    },
+    "RangedWeapon":{
+      "weapon_damage": "Damage",
+      "weapon_mode": "Mode",
+      "weapon_r_close": "Close",
+      "weapon_r_near": "Near",
+      "weapon_r_far": "Far",
+      "weapon_r_extreme": "Extreme",
+      "weapon_ammo": "Ammo"
+    },
+    "MeleeWeapon":{
+      "weapon_damage": "Damage",
+      "weapon_r_close": "Close"
+    },
+    "Augmentation":{
+      "rating": "Rating",
+      "essence": "Essence"
+    },
     "AdeptPower":{
       "name": "Name",
       "level": "Level"
+    },
+    "Gear":{
+      "name": "Name",
+      "rating": "Rating"
     },
     "MagicSpell": {
       "name": "Name",

@@ -48,6 +48,12 @@ export class Shadowrun6Actor extends Actor {
     // Make modifications to data here. For example:
     const systemData = actorData.system;
 
+    systemData.dice_pool_mod = 0;
+    if (systemData.cm_physical.value > 0){
+      systemData.dice_pool_mod =  Math.floor(((systemData.cm_physical.value - systemData.cm_physical.max) * -1) / 3);
+    }
+    
+
     // Loop through ability scores, and add their modifiers to our sheet output.
     /*for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.

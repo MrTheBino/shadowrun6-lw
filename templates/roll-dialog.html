@@ -1,1 +1,20 @@
-Amount of D6 dices: <input type="text" name="numDice" value="{{numDice}}" data-dtype="Number" />
+<div class="shadowrun6 styled_box">
+  <section class="grid grid-2col">
+    <div class="flexcol">{{localize 'SHADOWRUN6.RollDialog.D6DicePool'}}</div>
+    <div class="flexcol">
+      <input type="text" name="numDice" value="{{numDice}}" data-dtype="Number" />
+    </div>
+  </section>
+  <section class="grid grid-2col">
+    <div class="flexcol">{{localize 'SHADOWRUN6.RollDialog.PoolModNeg'}}</div>
+    <div class="flexcol">
+      <input type="text" name="numDiceModNeg" value="0" data-dtype="Number" />
+    </div>
+  </section>
+  <section class="grid grid-2col">
+    <div class="flexcol">{{localize 'SHADOWRUN6.RollDialog.PoolModPos'}}</div>
+    <div class="flexcol">
+      <input type="text" name="numDiceModPos" value="0" data-dtype="Number" />
+    </div>
+  </section>
+</div>

@@ -14,11 +14,13 @@
   {{!-- Sheet Body --}}
   <section class="sheet-body">
     <div class="tab attributes" data-group="primary" data-tab="attributes">
+      <div class="shadowrun6 styled_box">
      <section class="grid grid-2col">
-        <div class="flexcol">Rating</div>
+        <div class="flexcol">{{localize 'SHADOWRUN6.Items.Gear.rating'}}</div>
         <div class="flexcol"><input type="text" name="system.rating" value="{{system.rating}}" data-dtype="Number"/></div>
     </section>
     </div>
+  </div>
     
     <div class="tab" data-group="primary" data-tab="description">
       {{editor system.description target="system.description" rollData=rollData

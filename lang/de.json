@@ -63,12 +63,64 @@
     "Qualities": "Vor- und Nachteile",
     "Contacts": "Connections",
     "PersonalData": "Persönliche Daten",
-    "Armor": "Panzerung"
+    "Armor": "Panzerung",
+    "Augmentation": "Bodytech",
+    "Gear": "Ausrüstung",
+    "Vehicle": "Fahrzeug"
+  },
+
+  "SHADOWRUN6.Matrix": {
+    "attack": "Angriff",
+    "sleaze": "Schleicher",
+    "data_processing": "Datenverarbeitung",
+    "firewall": "Firewall",
+    "device_rating": "Geräte/GS",
+    "programs"  : "Programs",
+    "condition_monitor": "Matrixzustandsmonitor"
+  },
+
+  "SHADOWRUN6.Vehicle": {
+    "name":"Fahrzeug",
+    "handling": "Handling",
+    "acceleration": "Beschleunigung",
+    "speed_interval": "Geschwindigkeitsintervall",
+    "top_speed": "Höchstgeschwindigkeit",
+    "body": "Rumpf",
+    "armor": "Panzerung",
+    "pilot": "Pilot",
+    "sensor": "Sensor",
+    "seats": "Sitze"
   },
 
   "SHADOWRUN6.Items":{
     "Armor":{
       "armor_rating": "Verteidigungswert"
+    },
+    "Augmentation":{
+      "rating": "Stufe",
+      "essence": "Essenz"
+    },
+    "Skill":{
+      "skill_attribute": "Attribut",
+      "skill_rank": "Wert",
+      "skill_type": "Art"
+    },
+    "Gear":{
+      "name": "Name",
+      "rating": "Stufe"
+    },
+    "RangedWeapon":{
+      "weapon_damage": "Schaden",
+      "weapon_mode": "Modus",
+      "weapon_r_close": "Sehr Nah",
+      "weapon_r_near": "Nah",
+      "weapon_r_far": "Fern",
+      "weapon_r_extreme": "Sehr Fern",
+      "weapon_ammo": "Munition"
+    },
+    "MeleeWeapon":{
+      "weapon_damage": "Schaden",
+      "weapon_r_close": "Sehr Nah"
     },
     "AdeptPower":{
       "name": "Name",

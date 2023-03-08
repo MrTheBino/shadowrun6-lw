@@ -4,8 +4,16 @@ export function _caseInsensitiveReplace(line, word, replaceWith) {
 }
 
 function rollDialogRollCallback(html) {
-  let numDice = html.find('[name="numDice"]').val();
-  let roll = new Roll(numDice + "d6");
+  let numDice = parseInt(html.find('[name="numDice"]').val());
+  let numDiceModNeg = parseInt(html.find('[name="numDiceModNeg"]').val());
+  let numDiceModPos = parseInt(html.find('[name="numDiceModPos"]').val());
+
+  let dices = (numDice + numDiceModPos - numDiceModNeg);
+  if(dices <= 0){
+    return // we don't need to roll 0 or less dice
+  }
+
+  let roll = new Roll(dices+"d6");
   let t= roll.evaluate({async: false});
   
   let chatData = {

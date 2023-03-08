@@ -19,68 +19,84 @@
   </header>
 
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="attributes">{{localize 'SHADOWRUN6.Labels.Attributes'}}</a>
-    <a class="item" data-tab="description">{{localize 'SHADOWRUN6.Labels.Description'}}</a>
+    <a class="item" data-tab="attributes"
+      >{{localize 'SHADOWRUN6.Labels.Attributes'}}</a
+    >
+    <a class="item" data-tab="description"
+      >{{localize 'SHADOWRUN6.Labels.Description'}}</a
+    >
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
     <div class="tab attributes" data-group="primary" data-tab="attributes">
-      <section class="grid grid-2col">
-        <div class="flexcol">{{localize 'SHADOWRUN6.Items.MagicSpell.sprcf'}}</div>
-        <div class="flexcol">
-          <input
-            type="text"
-            name="system.sprcf"
-            value="{{system.sprcf}}"
-            data-dtype="String"
-          />
-        </div>
-      </section>
-      <section class="grid grid-2col">
-        <div class="flexcol">{{localize 'SHADOWRUN6.Items.MagicSpell.type_target'}}</div>
-        <div class="flexcol">
-          <input
-            type="text"
-            name="system.type_target"
-            value="{{system.type_target}}"
-            data-dtype="String"
-          />
-        </div>
-      </section>
-      <section class="grid grid-2col">
-        <div class="flexcol">{{localize 'SHADOWRUN6.Items.MagicSpell.range'}}</div>
-        <div class="flexcol">
-          <input
-            type="text"
-            name="system.range"
-            value="{{system.range}}"
-            data-dtype="String"
-          />
-        </div>
-      </section>
-      <section class="grid grid-2col">
-        <div class="flexcol">{{localize 'SHADOWRUN6.Items.MagicSpell.duration'}}</div>
-        <div class="flexcol">
-          <input
-            type="text"
-            name="system.duration"
-            value="{{system.duration}}"
-            data-dtype="String"
-          />
-        </div>
-      </section>
-      <section class="grid grid-2col">
-        <div class="flexcol">{{localize 'SHADOWRUN6.Items.MagicSpell.drain'}}</div>
-        <div class="flexcol">
-          <input
-            type="text"
-            name="system.drain"
-            value="{{system.drain}}"
-            data-dtype="String"
-          />
-        </div>
-      </section>
+      <div class="shadowrun6 styled_box">
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.MagicSpell.sprcf'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.sprcf"
+              value="{{system.sprcf}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.MagicSpell.type_target'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.type_target"
+              value="{{system.type_target}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.MagicSpell.range'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.range"
+              value="{{system.range}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.MagicSpell.duration'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.duration"
+              value="{{system.duration}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.MagicSpell.drain'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.drain"
+              value="{{system.drain}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+      </div>
     </div>
     <div class="tab" data-group="primary" data-tab="description">
       {{editor system.description target="system.description" rollData=rollData
