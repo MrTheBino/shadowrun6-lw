@@ -7,9 +7,34 @@ export class Shadowrun6Item extends Item {
    * Augment the basic Item data model with additional dynamic data.
    */
   prepareData() {
-    // As with the actor class, items are documents that can have their data
-    // preparation methods overridden (such as prepareBaseData()).
+    // Prepare data for the actor. Calling the super version of this executes
+    // the following, in order: data reset (to clear active effects),
+    // prepareBaseData(), prepareEmbeddedDocuments() (including active effects),
+    // prepareDerivedData().
     super.prepareData();
+  }
+/*
+  /**
+   * @override
+   */
+  prepareDerivedData() {
+    const itemData = this;
+    const systemData = itemData.system;
+    const flags = itemData.flags.shadowrun6 || {};
+    // Make separate methods for each Actor type (character, npc, etc.) to keep
+    // things organized.
+    this._prepareSkillData(itemData);
+  }
+
+  _prepareSkillData(itemData){
+    if (itemData.type !== 'skill') return;
+    const systemData = itemData.system;
+
+    // auto calculate WP
+    itemData.system.skill_wp = itemData.system.skill_rank;
+    if(itemData.system.skill_attribute){
+      itemData.system.skill_wp = itemData.system.skill_rank + itemData.actor.system.attributes[itemData.system.skill_attribute].value;
+    }
   }
 
   /**

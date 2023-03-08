@@ -1,29 +1,27 @@
 {
-  "SHADOWRUN6.AttributeLevel": "Level",
-  "SHADOWRUN6.AttributeBody": "Body",
-  "SHADOWRUN6.AttributeAgility": "Agility",
-  "SHADOWRUN6.AttributeReaction": "Reaction",
-  "SHADOWRUN6.AttributeStrength": "Strength",
-  "SHADOWRUN6.AttributeWillpower": "Willpower",
-  "SHADOWRUN6.AttributeLogic": "Logic",
+  "SHADOWRUN6.AttributeBody": "Konstitution",
+  "SHADOWRUN6.AttributeAgility": "Geschicklichkeit",
+  "SHADOWRUN6.AttributeReaction": "Reaktion",
+  "SHADOWRUN6.AttributeStrength": "Stärke",
+  "SHADOWRUN6.AttributeWillpower": "Willenskraft",
+  "SHADOWRUN6.AttributeLogic": "Logik",
   "SHADOWRUN6.AttributeIntuition": "Intuition",
   "SHADOWRUN6.AttributeCharisma": "Charisma",
   "SHADOWRUN6.AttributeEdge": "Edge",
-  "SHADOWRUN6.AttributeEdgePoints": "Edge Points",
-  "SHADOWRUN6.AttributeUnarmedArmor": "Unarmed Armor",
-  "SHADOWRUN6.AttributeEssence": "Essence",
-  "SHADOWRUN6.AttributeMagicResonance": "Magic/Resonance",
+  "SHADOWRUN6.AttributeEdgePoints": "Edgepunkte",
+  "SHADOWRUN6.AttributeUnarmedArmor": "Waffenlos",
+  "SHADOWRUN6.AttributeEssence": "Essenz",
+  "SHADOWRUN6.AttributeMagicResonance": "Magie/Resonanz",
   "SHADOWRUN6.AttributeInitiative": "Initiative",
-  "SHADOWRUN6.AttributeMatrixInitiative": "Matrix Initiative",
-  "SHADOWRUN6.AttributeAstralInitiative": "Astral Initiative",
-  "SHADOWRUN6.AttributeComposure": "Composure",
-  "SHADOWRUN6.AttributeJudgeIntentions": "Judge Intentions",
-  "SHADOWRUN6.AttributeMemory": "Memory",
-  "SHADOWRUN6.AttributeLiftCarry": "Lift & Carry",
-  "SHADOWRUN6.AttributeMovement": "Movement",
-  "SHADOWRUN6.AttributeDefenseRating": "Defense Rating",
+  "SHADOWRUN6.AttributeMatrixInitiative": "Matrix-Initiative",
+  "SHADOWRUN6.AttributeAstralInitiative": "Astrale Initiative",
+  "SHADOWRUN6.AttributeComposure": "Selbstbeherrschung",
+  "SHADOWRUN6.AttributeJudgeIntentions": "Menschenkenntnis",
+  "SHADOWRUN6.AttributeMemory": "Erinnerungsvermögen",
+  "SHADOWRUN6.AttributeLiftCarry": "Heben/Tragen",
+  "SHADOWRUN6.AttributeMovement": "Bewegung",
+  "SHADOWRUN6.AttributeDefenseRating": "Verteidigungswert",
 
-  "SHADOWRUN6.AttributeLevelAbbr": "level",
   "SHADOWRUN6.AttributeBodyAbbr": "body",
   "SHADOWRUN6.AttributeAgilityAbbr": "agility",
   "SHADOWRUN6.AttributeReactionAbbr": "reaction",
@@ -53,35 +51,36 @@
   "SHADOWRUN6.EffectDelete": "Delete Effect",
 
   "SHADOWRUN6.Add": "Add",
-  
+
   "SHADOWRUN6.Labels":{
-    "Attributes": "Attributes",
-    "Description": "Description"
+    "Attributes": "Attribute",
+    "Description": "Beschreibung"
   },
 
   "SHADOWRUN6.Titles":{
-    "MagicSpells": "Spells / Preparations Riturals / Complex Forms",
-    "AdeptPowersAndOthers": "Adept Powers and other abilities",
-    "Qualities": "Qualities",
-    "Contacts": "Contacts",
-    "PersonalData": "Personal Data"
+    "MagicSpells": "Zauber / Erzeugnisse / Rituale / Komplexe Formen",
+    "AdeptPowersAndOthers": "Adeptenkräfte & andere Fähigkeiten",
+    "Qualities": "Vor- und Nachteile",
+    "Contacts": "Connections",
+    "PersonalData": "Persönliche Daten",
+    "Armor": "Panzerung"
   },
 
   "SHADOWRUN6.Items":{
     "Armor":{
-      "armor_rating": "Rating"
+      "armor_rating": "Verteidigungswert"
     },
     "AdeptPower":{
       "name": "Name",
-      "level": "Level"
+      "level": "Stufe"
     },
     "MagicSpell": {
       "name": "Name",
-      "type_target": "Type/Target",
-      "range": "Range",
-      "duration": "Duration",
-      "drain": "Drain",
-      "sprcf": "S/P/R/CF"
+      "type_target": "Art/Ziel",
+      "range": "Reichweite",
+      "duration": "Dauer",
+      "drain": "Entzug",
+      "sprcf": "Z/E/R/KF"
     }
   }
 }

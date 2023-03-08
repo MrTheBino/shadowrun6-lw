@@ -7,6 +7,8 @@
   return loadTemplates([
 
     // Actor partials.
+    "systems/shadowrun6-lw/templates/actor/parts/actor-attributes.html",
+    "systems/shadowrun6-lw/templates/actor/parts/actor-skills.html",
     "systems/shadowrun6-lw/templates/actor/parts/actor-matrix.html",
     "systems/shadowrun6-lw/templates/actor/parts/actor-vehicle.html",
     "systems/shadowrun6-lw/templates/actor/parts/actor-magic.html",

@@ -8,7 +8,7 @@
           "min": 0,
           "max": 10
         },
-        "edge": {
+        "edge_points": {
           "value": 0,
           "min": 0,
           "max": 10
@@ -34,7 +34,7 @@
     "character": {
       "templates": ["base"],
       "attributes": {
-        "edge_points":{
+        "edge":{
           "value": 0
         },
         "unarmed_ar":{
@@ -205,7 +205,8 @@
       "templates": ["base"],
       "skill_rank": 0,
       "skill_attribute":"",
-      "skill_type": ""
+      "skill_type": "",
+      "skill_wp": 0
     },
     "item": {
       "templates": ["base"],

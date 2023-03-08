@@ -10,7 +10,7 @@ export class Shadowrun6ItemSheet extends ItemSheet {
       classes: ["shadowrun6", "sheet", "item"],
       width: 520,
       height: 480,
-      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "attributes" }]
     });
   }
 
@@ -42,11 +42,13 @@ export class Shadowrun6ItemSheet extends ItemSheet {
       context.rollData = actor.getRollData();
     }
 
+    
+    
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
     context.flags = itemData.flags;
     context.char_attributes  = game.system.template.Actor.character.attributes;
-
+    
     return context;
   }
 
