@@ -7,6 +7,7 @@ function rollDialogRollCallback(html) {
   let numDice = parseInt(html.find('[name="numDice"]').val());
   let numDiceModNeg = parseInt(html.find('[name="numDiceModNeg"]').val());
   let numDiceModPos = parseInt(html.find('[name="numDiceModPos"]').val());
+  let rollLabel = html.find('[name="rollLabel"]').val();
 
   let dices = (numDice + numDiceModPos - numDiceModNeg);
   if(dices <= 0){
@@ -20,16 +21,17 @@ function rollDialogRollCallback(html) {
     user: game.user._id,
     roll: roll,
     speaker: ChatMessage.getSpeaker(),
-    content: processRollResult(t),
+    content: processRollResult(t,rollLabel),
     type: CONST.CHAT_MESSAGE_TYPES.ROLL
   };
   ChatMessage.create(chatData, {});
 
 }
 
-export function showSR6RollDialog(numDice) {
+export function showSR6RollDialog(numDice,label = null) {
   let templateData = {
-    numDice: numDice
+    numDice: numDice,
+    label: label
   };
 
   renderTemplate("systems/shadowrun6-lw/templates/roll-dialog.html", templateData).then(html => {
@@ -51,12 +53,16 @@ export function showSR6RollDialog(numDice) {
     }).render(true);
   });
 }
-export function processRollResult(roll) {
+
+export function processRollResult(roll,label = null) {
   let messageText = "";
 
   let dice = roll.dice[0];
 
   messageText = '<div class="dice-roll">';
+  if(label != null) {
+    messageText += "<h3>" + label + "</h3>";
+  }
   messageText += '<div class="dice-result">';
   let success_count = 0;
   let failure_count = 0;

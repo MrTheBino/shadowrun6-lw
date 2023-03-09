@@ -22,15 +22,6 @@
     {{#each ranged_weapons as |item id|}}
     <li class="item flexrow" data-item-id="{{item._id}}">
       <div class="item-name">
-        <div class="item-image">
-          <a class="rollable" data-roll-type="item"
-            ><img
-              src="{{item.img}}"
-              title="{{item.name}}"
-              width="24"
-              height="24"
-          /></a>
-        </div>
         <h4>{{item.name}}</h4>
       </div>
       <div>{{item.system.weapon_damage}}</div>
@@ -73,15 +64,6 @@
     {{#each melee_weapons as |item id|}}
     <li class="item flexrow" data-item-id="{{item._id}}">
       <div class="item-name">
-        <div class="item-image">
-          <a class="rollable" data-roll-type="item"
-            ><img
-              src="{{item.img}}"
-              title="{{item.name}}"
-              width="24"
-              height="24"
-          /></a>
-        </div>
         <h4>{{item.name}}</h4>
       </div>
       <div>{{item.system.weapon_damage}}</div>
@@ -118,15 +100,6 @@
     {{#each equipment_armor as |item id|}}
     <li class="item flexrow" data-item-id="{{item._id}}">
       <div class="item-name">
-        <div class="item-image">
-          <a class="rollable" data-roll-type="item"
-            ><img
-              src="{{item.img}}"
-              title="{{item.name}}"
-              width="24"
-              height="24"
-          /></a>
-        </div>
         <h4>{{item.name}}</h4>
       </div>
       <div>{{item.system.armor_rating}}</div>

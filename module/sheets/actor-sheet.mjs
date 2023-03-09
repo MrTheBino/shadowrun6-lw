@@ -25,7 +25,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
   /* -------------------------------------------- */
 
   /** @override */
-  getData() {
+  async getData() {
     // Retrieve the data structure from the base sheet. You can inspect or log
     // the context variable to see the structure, but some key properties for
     // sheets are the actor object, the data object, whether or not it's
@@ -34,6 +34,9 @@ export class Shadowrun6ActorSheet extends ActorSheet {
 
     // Use a safe clone of the actor data for further operations.
     const actorData = this.actor.toObject(false);
+
+    actorData.system.biography = await this._enrichHTML(actorData.system.biography);
+    console.log(actorData.system.biography);
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = actorData.system;
@@ -241,12 +244,16 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     return await Item.create(itemData, {parent: this.actor});
   }
 
+  async _enrichHTML(value) {
+    return await TextEditor.enrichHTML(value, { async: true });
+  }
+
   _onRollDialog(event) {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    showSR6RollDialog(dataset.roll);
+    showSR6RollDialog(dataset.roll,dataset.label);
   }
   /**
    * Handle clickable rolls.

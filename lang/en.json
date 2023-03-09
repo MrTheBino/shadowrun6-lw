@@ -75,7 +75,8 @@
   "SHADOWRUN6.RollDialog":{
     "D6DicePool": "D6 Dice Pool",
     "PoolModNeg": "Negative Pool Mod",
-    "PoolModPos": "Positive Pool Mod"
+    "PoolModPos": "Positive Pool Mod",
+    "D6DicePoolName": "Action"
   },
 
   "SHADOWRUN6.Vehicle": {

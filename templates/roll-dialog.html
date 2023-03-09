@@ -1,5 +1,11 @@
 <div class="shadowrun6 styled_box">
   <section class="grid grid-2col">
+    <div class="flexcol">{{localize 'SHADOWRUN6.RollDialog.D6DicePoolName'}}</div>
+    <div class="flexcol">
+      <input type="text" name="rollLabel" value="{{label}}" data-dtype="String" />
+    </div>
+  </section>
+  <section class="grid grid-2col">
     <div class="flexcol">{{localize 'SHADOWRUN6.RollDialog.D6DicePool'}}</div>
     <div class="flexcol">
       <input type="text" name="numDice" value="{{numDice}}" data-dtype="Number" />
