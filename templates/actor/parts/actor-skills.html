@@ -16,20 +16,31 @@
     <li class="item flexrow" data-item-id="{{skill_entry._id}}">
       <div class="item-name">
         <div class="item-image">
-          <a class="rolldialog"
-          data-roll="{{skill_entry.system.skill_wp}}" data-label="{{skill_entry.name}}"><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i></a>
+          {{#ifEquals skill_entry.system.skill_type "A"}}
+          <a
+            class="rolldialog"
+            data-roll="{{skill_entry.system.skill_wp}}"
+            data-label="{{skill_entry.name}}"
+            ><i class="fa-solid fa-dice-five" style="margin-top: 8px"></i
+          ></a>
+          {{/ifEquals}}
         </div>
-        <label
-          class="rolldialog"
-          data-roll="{{skill_entry.system.skill_wp}}"
+        <label class="rolldialog" data-roll="{{skill_entry.system.skill_wp}}"
           >{{skill_entry.name}}</label
         >
       </div>
-      <div class="item-skill-rank">{{skill_entry.system.skill_rank}}</div>
-      <div class="item-skill-attribute">
-        {{localizeAttribute skill_entry.system.skill_attribute}}
+      <div class="item-skill-rank">
+        {{#ifEquals skill_entry.system.skill_type
+        "A"}}{{skill_entry.system.skill_rank}}{{/ifEquals}}
       </div>
-      <div class="item-skill-type">{{skill_entry.system.skill_wp}}</div>
+      <div class="item-skill-attribute">
+        {{#ifEquals skill_entry.system.skill_type "A"}} {{localizeAttribute
+        skill_entry.system.skill_attribute}} {{/ifEquals}}
+      </div>
+      <div class="item-skill-type">
+        {{#ifEquals skill_entry.system.skill_type
+        "A"}}{{skill_entry.system.skill_wp}}{{/ifEquals}}
+      </div>
       <div class="item-skill-type">{{skill_entry.system.skill_type}}</div>
       <div class="item-controls">
         <a class="item-control item-edit" title="Edit Item"
