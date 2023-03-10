@@ -142,7 +142,8 @@
       "range": "Reichweite",
       "duration": "Dauer",
       "drain": "Entzug",
-      "sprcf": "Z/E/R/KF"
+      "sprcf": "Z/E/R/KF",
+      "damage": "Schaden"
     }
   }
 }

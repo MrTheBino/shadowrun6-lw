@@ -152,7 +152,8 @@
       "range": "Range",
       "duration": "Duration",
       "drain": "Drain",
-      "sprcf": "S/P/R/CF"
+      "sprcf": "S/P/R/CF",
+      "damage": "Damage"
     }
   }
 }

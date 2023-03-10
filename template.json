@@ -261,7 +261,8 @@
       "range": "",
       "duration": "",
       "drain": "",
-      "sprcf": ""
+      "sprcf": "",
+      "damage": ""
     },
     "feature": {
       "templates": ["base"]
