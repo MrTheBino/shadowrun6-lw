@@ -63,12 +63,12 @@
             {{localize 'SHADOWRUN6.Items.Skill.skill_type'}}
           </div>
           <div class="flexcol">
-            <input
-              type="text"
-              name="system.skill_type"
-              value="{{system.skill_type}}"
-              data-dtype="Number"
-            />
+            <select class="" name="system.skill_type" data-type="String">
+              {{#select system.skill_type}} {{#each char_skill_types as
+              |ct key|}}
+              <option value="{{key}}">{{ct.label}}</option>
+              {{/each}} {{/select}}
+            </select>
           </div>
         </section>
       </div>

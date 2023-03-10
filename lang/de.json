@@ -103,7 +103,17 @@
     "Skill":{
       "skill_attribute": "Attribut",
       "skill_rank": "Wert",
-      "skill_type": "Art"
+      "skill_type": "Art",
+      "skill_types": {
+        "short":{
+          "attribute": "A",
+          "knowledge": "W"
+        },
+        "long":{
+          "attribute": "Attribut",
+          "knowledge": "Wissen"
+        }
+      }
     },
     "Gear":{
       "name": "Name",

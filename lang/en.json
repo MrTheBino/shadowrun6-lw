@@ -109,7 +109,17 @@
     "Skill":{
       "skill_attribute": "Attribute",
       "skill_rank": "Rank",
-      "skill_type": "Typ"
+      "skill_type": "Typ",
+      "skill_types": {
+        "short":{
+          "attribute": "A",
+          "knowledge": "K"
+        },
+        "long":{
+          "attribute": "Attribute",
+          "knowledge": "Knowledge"
+        }
+      }
     },
     "RangedWeapon":{
       "weapon_damage": "Damage",

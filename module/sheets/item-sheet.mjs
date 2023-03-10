@@ -48,6 +48,7 @@ export class Shadowrun6ItemSheet extends ItemSheet {
     context.system = itemData.system;
     context.flags = itemData.flags;
     context.char_attributes  = game.system.template.Actor.character.attributes;
+    context.char_skill_types = {A:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.attribute')},K:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.knowledge')}};
     
     return context;
   }
