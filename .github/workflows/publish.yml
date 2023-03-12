@@ -1,4 +1,5 @@
 name: Publish release
+permissions: read-all|write-all
 
 on:
  release:
@@ -25,7 +26,7 @@ jobs:
        uses: battila7/get-version-action@v2
 
      - name: Create zip archive
-       run: zip -r ./shadowrun6-lw.zip ./ -x node_modules/**
+       run: zip -x node_modules/** -x .git/** -r ./shadowrun6-lw.zip ./ 
 
      - name: Update release with files
        id: create_version_release
