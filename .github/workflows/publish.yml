@@ -25,7 +25,7 @@ jobs:
        uses: battila7/get-version-action@v2
 
      - name: Create zip archive
-       run: zip -r ./shadowrun6-lw.zip ./ -x node_modules**
+       run: zip -r ./shadowrun6-lw.zip ./ -x node_modules/**
 
      - name: Update release with files
        id: create_version_release

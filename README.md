@@ -1,4 +1,4 @@
-# Shadowrun6 Leightweight System
+# Shadowrun6 Leightweight System for FoundryVTT
 
 ![Foundry v10](https://img.shields.io/badge/foundry-v10-green)
 
