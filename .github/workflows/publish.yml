@@ -25,7 +25,6 @@ jobs:
        uses: battila7/get-version-action@v2
 
      - name: Create zip archive
-       working-directory: dist
        run: zip -r ./shadowrun6-lw.zip ./
 
      - name: Update release with files
@@ -37,6 +36,6 @@ jobs:
          draft: ${{ github.event.release.unpublished }}
          prerelease: ${{ github.event.release.prerelease }}
          token: ${{ secrets.GITHUB_TOKEN }}
-         artifacts: "./dist/system.json, ./dist/shadowrun6-lw.zip"
+         artifacts: "./shadowrun6-lw/system.json, ./shadowrun6-lw.zip"
          tag: ${{ github.event.release.tag_name }}
          body: ${{ github.event.release.body }}
