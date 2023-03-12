@@ -18,15 +18,12 @@ jobs:
        with:
          node-version: 18
 
-     - name: Install dependencies
-       run: yarn
-
      - name: Extract tag version number
        id: get_version
        uses: battila7/get-version-action@v2
 
      - name: Create zip archive
-       run: zip -x node_modules/** -x .git/** -r ./shadowrun6-lw.zip ./ 
+       run: zip -r ./shadowrun6-lw.zip ./ 
 
      - name: Update release with files
        id: create_version_release
@@ -37,6 +34,6 @@ jobs:
          draft: ${{ github.event.release.unpublished }}
          prerelease: ${{ github.event.release.prerelease }}
          token: ${{ secrets.GITHUB_TOKEN }}
-         artifacts: "./shadowrun6-lw/system.json, ./shadowrun6-lw.zip"
+         artifacts: "./system.json, ./shadowrun6-lw.zip"
          tag: ${{ github.event.release.tag_name }}
          body: ${{ github.event.release.body }}
