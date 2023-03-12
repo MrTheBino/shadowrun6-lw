@@ -1,5 +1,4 @@
 name: Publish release
-permissions: read-all|write-all
 
 on:
  release:
@@ -8,6 +7,7 @@ on:
 
 jobs:
  build:
+   permissions: write-all
    runs-on: ubuntu-latest
    steps:
      - name: Checkout
