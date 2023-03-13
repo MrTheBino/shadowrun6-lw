@@ -32,8 +32,8 @@
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "power",
   "url": "https://github.com/MrTheBino/shadowrun6-lw",
-  "manifest": "https://github.com/MrTheBino/shadowrun6-lw/releases/download/latest/system.json",
-  "download": "https://github.com/MrTheBino/shadowrun6-lw/releases/download/latest/shadowrun6-lw.zip",
+  "manifest": "https://github.com/MrTheBino/shadowrun6-lw/releases/latest/download/system.json",
+  "download": "https://github.com/MrTheBino/shadowrun6-lw/releases/latest/download/shadowrun6-lw.zip",
   "license": "LICENSE.txt",
   "changelog": "CHANGELOG.md"
 }
