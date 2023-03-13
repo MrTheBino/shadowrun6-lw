@@ -10,7 +10,7 @@ This system is completely Unofficial.
 ## Features:
 
 * character sheet
-* minion sheet
+* minion / npc sheet
 * simple roll dialog and dice pool roll command
 
 
@@ -18,3 +18,29 @@ This system is completely Unofficial.
 
 * english
 * german
+
+
+## Minion / NPC sheet markdown
+
+    [[/srr 4 # Some Minion Skillcheck]]
+
+Enter the above code in a npc sheet to add some easier way to access different skill checks. You can simply click on the generated text
+to open the roll dialog with the provided data.
+
+### Chat commands
+
+    /srr Number
+
+Simply enter **/srr Number** in the chat to make a manual dice pool roll with *Number* of D6 dices.
+
+### Discord
+
+You can reach me on Discord via MrTheBino#7878
+
+## Changelog:
+
+### v0.2
+
+* first public release
+
+![alt text](shadowrun6-lw-0.2.jpg "Shadowrun 6 Leightweight Reference Image")
