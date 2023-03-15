@@ -57,6 +57,14 @@
     "Description": "Beschreibung"
   },
 
+  "SHADOWRUN6.Actions":{
+    "DefenseCheck": "Verteidungsprobe"
+  },
+
+  "SHADOWRUN6.Help":{
+    "DefenseCheck": "Reaktion + Intuition + Mod"
+  },
+
   "SHADOWRUN6.Titles":{
     "MagicSpells": "Zauber / Erzeugnisse / Rituale / Komplexe Formen",
     "AdeptPowersAndOthers": "Adeptenkräfte & andere Fähigkeiten",

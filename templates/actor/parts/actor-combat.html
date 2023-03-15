@@ -1,4 +1,20 @@
 <div class="shadowrun6 styled_box">
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <button
+        class="rolldialog"
+        data-roll="{{system.defense_check}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.DefenseCheck'}}"
+        title="{{localize 'SHADOWRUN6.Help.DefenseCheck'}}"
+      >
+        <i class="fa-solid fa-dice-five" style="margin-top: 8px"></i> {{localize
+        'SHADOWRUN6.Actions.DefenseCheck'}} ({{system.defense_check}})
+      </button>
+    </div>
+  </section>
+</div>
+
+<div class="shadowrun6 styled_box">
   <h2>{{localize 'SHADOWRUN6.Titles.RangedWeapons'}}</h2>
 
   {{!-- Ranged Weapons --}}

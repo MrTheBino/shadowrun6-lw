@@ -61,6 +61,14 @@
     "Description": "Description"
   },
 
+  "SHADOWRUN6.Actions":{
+    "DefenseCheck": "Defense Check"
+  },
+
+  "SHADOWRUN6.Help":{
+    "DefenseCheck": "Reaction + Intuition + Modifiers"
+  },
+
   "SHADOWRUN6.Titles":{
     "MagicSpells": "Spells / Preparations Riturals / Complex Forms",
     "AdeptPowersAndOthers": "Adept Powers and other abilities",
@@ -78,7 +86,8 @@
     "Magic": "Magic",
     "Character": "Character",
     "Equipment": "Equipment",
-    "Notes": "Notes"
+    "Notes": "Notes",
+    "Armor": "Armor"
   },
 
   "SHADOWRUN6.RollDialog":{

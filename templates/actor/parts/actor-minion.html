@@ -1,79 +1,238 @@
 <div class="shadowrun6 styled_box">
   <section class="grid grid-11col">
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.body.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeBody'}}" title="{{localize 'SHADOWRUN6.AttributeBody'}}">K</div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.agility.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeAgility'}}" title="{{localize 'SHADOWRUN6.AttributeAgility'}}">G</div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.reaction.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeReaction'}}" title="{{localize 'SHADOWRUN6.AttributeReaction'}}">R
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.body.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeBody'}}"
+      title="{{localize 'SHADOWRUN6.AttributeBody'}}"
+    >
+      K
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.strength.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeStrength'}}" title="{{localize 'SHADOWRUN6.AttributeStrength'}}">S
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.agility.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeAgility'}}"
+      title="{{localize 'SHADOWRUN6.AttributeAgility'}}"
+    >
+      G
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.willpower.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeWillpower'}}" title="{{localize 'SHADOWRUN6.AttributeWillpower'}}">W
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.reaction.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeReaction'}}"
+      title="{{localize 'SHADOWRUN6.AttributeReaction'}}"
+    >
+      R
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.logic.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeLogic'}}" title="{{localize 'SHADOWRUN6.AttributeLogic'}}">L</div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.intuition.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeIntuition'}}" title="{{localize 'SHADOWRUN6.AttributeIntuition'}}">I
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.strength.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeStrength'}}"
+      title="{{localize 'SHADOWRUN6.AttributeStrength'}}"
+    >
+      S
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.charisma.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeCharisma'}}" title="{{localize 'SHADOWRUN6.AttributeCharisma'}}">C
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.willpower.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeWillpower'}}"
+      title="{{localize 'SHADOWRUN6.AttributeWillpower'}}"
+    >
+      W
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.magic.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeMagic'}}" title="{{localize 'SHADOWRUN6.AttributeMagic'}}">M</div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.essence.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeEssence'}}" title="{{localize 'SHADOWRUN6.AttributeEssence'}}">ESS
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.logic.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeLogic'}}"
+      title="{{localize 'SHADOWRUN6.AttributeLogic'}}"
+    >
+      L
     </div>
-    <div class="flexcol rolldialog" data-roll="{{system.attributes.resonance.value}}"
-      data-label="{{localize 'SHADOWRUN6.AttributeResonance'}}" title="{{localize 'SHADOWRUN6.AttributeResonance'}}">RES
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.intuition.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeIntuition'}}"
+      title="{{localize 'SHADOWRUN6.AttributeIntuition'}}"
+    >
+      I
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.charisma.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeCharisma'}}"
+      title="{{localize 'SHADOWRUN6.AttributeCharisma'}}"
+    >
+      C
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.magic.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeMagic'}}"
+      title="{{localize 'SHADOWRUN6.AttributeMagic'}}"
+    >
+      M
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.essence.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeEssence'}}"
+      title="{{localize 'SHADOWRUN6.AttributeEssence'}}"
+    >
+      ESS
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.resonance.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeResonance'}}"
+      title="{{localize 'SHADOWRUN6.AttributeResonance'}}"
+    >
+      RES
     </div>
   </section>
   <section class="grid grid-11col">
-    <div class="flexcol"><input type="text" name="system.attributes.body.value" value="{{system.attributes.body.value}}"
-        data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.agility.value"
-        value="{{system.attributes.agility.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.reaction.value"
-        value="{{system.attributes.reaction.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.strength.value"
-        value="{{system.attributes.strength.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.willpower.value"
-        value="{{system.attributes.willpower.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.logic.value"
-        value="{{system.attributes.logic.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.intuition.value"
-        value="{{system.attributes.intuition.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.charisma.value"
-        value="{{system.attributes.charisma.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.magic.value"
-        value="{{system.attributes.magic.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.essence.value"
-        value="{{system.attributes.essence.value}}" data-dtype="Number" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.resonance.value"
-        value="{{system.attributes.resonance.value}}" data-dtype="Number" /></div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.body.value"
+        value="{{system.attributes.body.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.agility.value"
+        value="{{system.attributes.agility.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.reaction.value"
+        value="{{system.attributes.reaction.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.strength.value"
+        value="{{system.attributes.strength.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.willpower.value"
+        value="{{system.attributes.willpower.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.logic.value"
+        value="{{system.attributes.logic.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.intuition.value"
+        value="{{system.attributes.intuition.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.charisma.value"
+        value="{{system.attributes.charisma.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.magic.value"
+        value="{{system.attributes.magic.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.essence.value"
+        value="{{system.attributes.essence.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.resonance.value"
+        value="{{system.attributes.resonance.value}}"
+        data-dtype="Number"
+      />
+    </div>
   </section>
 </div>
 
 <div class="shadowrun6 styled_box">
   <section class="grid grid-3col">
     <div class="flexcol">
-      <label for="system.attributes.initiative.value" class="resource-label rollable flexlarge align-left"
-        data-roll="{{system.attributes.initiative.value}}" data-label="Initiative">Initiative</label>
+      <label
+        for="system.attributes.initiative.value"
+        class="resource-label rollable flexlarge align-left"
+        data-roll="{{system.attributes.initiative.value}}"
+        data-label="Initiative"
+        >Initiative</label
+      >
     </div>
     <div class="flexcol">Matrix Ini</div>
     <div class="flexcol">Astral Ini</div>
   </section>
   <section class="grid grid-3col">
-    <div class="flexcol"><input type="text" name="system.attributes.initiative.value"
-        value="{{system.attributes.initiative.value}}" data-dtype="String" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.matrix_initiative.value"
-        value="{{system.attributes.matrix_initiative.value}}" data-dtype="String" /></div>
-    <div class="flexcol"><input type="text" name="system.attributes.astral_initiative.value"
-        value="{{system.attributes.astral_initiative.value}}" data-dtype="String" /></div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.initiative.value"
+        value="{{system.attributes.initiative.value}}"
+        data-dtype="String"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.matrix_initiative.value"
+        value="{{system.attributes.matrix_initiative.value}}"
+        data-dtype="String"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.astral_initiative.value"
+        value="{{system.attributes.astral_initiative.value}}"
+        data-dtype="String"
+      />
+    </div>
+    <div class="flexcol">
+      <button
+        class="rolldialog"
+        data-roll="{{system.defense_check}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.DefenseCheck'}}"
+        title="{{localize 'SHADOWRUN6.Help.DefenseCheck'}}"
+      >
+        <i class="fa-solid fa-dice-five" style="margin-top: 8px"></i> {{localize
+        'SHADOWRUN6.Actions.DefenseCheck'}} ({{system.defense_check}})
+      </button>
+    </div>
   </section>
 </div>
-
 <h3>Description</h3>
-{{editor system.biography target="system.biography" rollData=rollData button=true owner=owner editable=editable}}
+{{editor system.biography target="system.biography" rollData=rollData
+button=true owner=owner editable=editable}}

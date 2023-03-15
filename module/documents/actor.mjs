@@ -53,7 +53,9 @@ export class Shadowrun6Actor extends Actor {
       systemData.dice_pool_mod =  Math.floor(((systemData.cm_physical.value - systemData.cm_physical.max) * -1) / 3);
     }
     
-
+    // defense data
+    systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.intuition.value)
+    
     // Loop through ability scores, and add their modifiers to our sheet output.
     /*for (let [key, ability] of Object.entries(systemData.abilities)) {
       // Calculate the modifier using d20 rules.
@@ -73,6 +75,9 @@ export class Shadowrun6Actor extends Actor {
     if (systemData.cm_physical.value > 0){
       systemData.dice_pool_mod =  Math.floor(((systemData.cm_physical.value - systemData.cm_physical.max) * -1) / 3);
     }
+
+    // defense data
+    systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.intuition.value)
   }
 
   /**
