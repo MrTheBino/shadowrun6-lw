@@ -32,12 +32,23 @@
     <div class="tab attributes" data-group="primary" data-tab="attributes">
       <div class="shadowrun6 styled_box">
         <section class="grid grid-2col">
-          <div class="flexcol">Loyality</div>
+          <div class="flexcol">{{localize 'SHADOWRUN6.Items.Contact.loyality'}}</div>
           <div class="flexcol">
             <input
               type="text"
               name="system.loyality"
               value="{{system.loyality}}"
+              data-dtype="Number"
+            />
+          </div>
+        </section>
+        <section class="grid grid-2col">
+          <div class="flexcol">{{localize 'SHADOWRUN6.Items.Contact.influence'}}</div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.influence"
+              value="{{system.influence}}"
               data-dtype="Number"
             />
           </div>

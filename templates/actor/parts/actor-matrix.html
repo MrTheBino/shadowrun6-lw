@@ -1,3 +1,51 @@
+<fieldset class="shadowrun6 styled_box">
+  <legend>{{localize 'SHADOWRUN6.Titles.QuickMatrixActions'}}</legend>
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <span
+        class="rolldialog"
+        data-roll="{{system.matrix_legal_action_dp}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.MatrixActionLegal'}}"
+        title="{{localize 'SHADOWRUN6.Help.MatrixActionLegal'}}"
+      >
+        <i class="fa-solid fa-dice-five"></i> {{localize
+        'SHADOWRUN6.Actions.MatrixActionLegal'}} ({{system.matrix_legal_action_dp}})
+        </span>
+    </div>
+    <div class="flexcol"><span>{{system.attributes.logic.label}} ({{system.attributes.logic.value}})</span></div>
+    <div class="flexcol">
+        <select class="" name="system.matrix.matrix_attr_legal" data-type="String">
+          {{#select system.matrix.matrix_attr_legal}} {{#each skills as
+            |skill key|}}
+            <option value="{{skill.name}}">{{skill.name}} ({{skill.system.skill_rank}})</option>
+            {{/each}} {{/select}}
+        </select>
+    </div>
+  </section>
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <span
+        class="rolldialog"
+        data-roll="{{system.matrix_legal_action_dp}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.MatrixActionIllegal'}}"
+        title="{{localize 'SHADOWRUN6.Help.MatrixActionIllegal'}}"
+      >
+        <i class="fa-solid fa-dice-five"></i> {{localize
+        'SHADOWRUN6.Actions.MatrixActionIllegal'}} ({{system.matrix_illegal_action_dp}})
+        </span>
+    </div>
+    <div class="flexcol"><span>{{system.attributes.logic.label}} ({{system.attributes.logic.value}})</span></div>
+    <div class="flexcol">
+        <select class="" name="system.matrix.matrix_attr_illegal" data-type="String">
+          {{#select system.matrix.matrix_attr_illegal}} {{#each skills as
+            |skill key|}}
+            <option value="{{skill.name}}">{{skill.name}} ({{skill.system.skill_rank}})</option>
+            {{/each}} {{/select}}
+        </select>
+    </div>
+  </section>
+</fieldset>
+
 <div class="shadowrun6 styled_box">
   <div class="flexrow grid">
     <label for="system.matrix.attack" class="resource-label">{{localize 'SHADOWRUN6.Matrix.attack'}}</label>

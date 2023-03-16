@@ -24,6 +24,16 @@ export class Shadowrun6Item extends Item {
     // Make separate methods for each Actor type (character, npc, etc.) to keep
     // things organized.
     this._prepareSkillData(itemData);
+    this._prepareContactData(itemData);
+  }
+
+  _prepareContactData(itemData){
+    if (itemData.type !== 'contact') return;
+    const systemData = itemData.system;
+
+    
+    itemData.system.contact_check = (itemData.actor.system.attributes.charisma.value + itemData.system.influence)
+    itemData.system.contact_check_mod = itemData.system.loyality
   }
 
   _prepareSkillData(itemData){

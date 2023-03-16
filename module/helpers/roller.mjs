@@ -28,9 +28,11 @@ function rollDialogRollCallback(html) {
 
 }
 
-export function showSR6RollDialog(numDice,label = null) {
+export function showSR6RollDialog(numDice,label = null,pos_mod = 0,neg_mod = 0) {
   let templateData = {
     numDice: numDice,
+    numPosMod: pos_mod,
+    numNegMod: neg_mod,
     label: label
   };
 

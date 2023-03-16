@@ -2,8 +2,8 @@ export class ShadowCommandHelper{
     static install() {
         CONFIG.TextEditor.enrichers.push({ pattern: /\[\[(\/srr\s)(.*?)([\]]{2,3})(?:{([^}]+)})?/gi, enricher: this.#enrichRollCommand});
     
-        console.log("ShadowCommandHelper: installed");
-        console.log(CONFIG.TextEditor.enrichers);
+        //console.log("ShadowCommandHelper: installed");
+        //console.log(CONFIG.TextEditor.enrichers);
         //this.#activateListeners($('body'));
       }
 
@@ -12,7 +12,7 @@ export class ShadowCommandHelper{
       }
 
       static #enrichRollCommand(match, options) {
-        console.log("ShadowCommandHelper: enrichRollCommand");
+        //console.log("ShadowCommandHelper: enrichRollCommand");
         const formel = match[2];
         const t = formel.split('#', 2).map(p => p.trim());
         const num_dices = t[0];

@@ -98,6 +98,10 @@
           "value": 0
         }
       },
+      "magic":{
+        "spell_check_skill": "",
+        "drain_check_skill": ""
+      },
       "matrix": {
         "attack": "",
         "sleaze": "",
@@ -109,7 +113,9 @@
           "value": 0,
           "min": 0,
           "max": 12
-        }
+        },
+        "matrix_attr_legal":"",
+        "matrix_attr_illegal":""
       },
       "vehicle":{
         "name": "",
@@ -240,7 +246,7 @@
     "contacts": {
       "templates": ["base"],
       "loyality": 0,
-      "connection": 0
+      "influence": 0
     },
     "melee_weapon": {
       "templates": ["base"],

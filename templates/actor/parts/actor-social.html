@@ -108,7 +108,8 @@
   <ol class="items-list">
     <li class="item flexrow items-header">
       <div class="item-name">Name</div>
-      <div class="item-name">Rating</div>
+      <div class="item-name">{{localize 'SHADOWRUN6.Items.Contact.influence'}}</div>
+      <div class="item-name">{{localize 'SHADOWRUN6.Items.Contact.loyality'}}</div>
       <div class="item-controls">
         <a
           class="item-control item-create"
@@ -121,8 +122,19 @@
     {{#each contacts as |item id|}}
     <li class="item flexrow" data-item-id="{{item._id}}">
       <div class="item-name">
+        <div class="item-image">
+          <a
+            class="rolldialog"
+            data-roll="{{item.system.contact_check}}"
+            data-rollposmod="{{item.system.contact_check_mod}}"
+            data-label="{{item.name}} - {{localize 'SHADOWRUN6.Items.Contact.influence'}} + {{localize 'SHADOWRUN6.AttributeCharisma'}} + {{localize 'SHADOWRUN6.Items.Contact.loyality'}}"
+            title="{{localize 'SHADOWRUN6.Items.Contact.influence'}} + {{localize 'SHADOWRUN6.AttributeCharisma'}} + {{localize 'SHADOWRUN6.Items.Contact.loyality'}}"
+            ><i class="fa-solid fa-dice-five" style="margin-top: 8px"></i
+          ></a>
+        </div>
         <h4>{{item.name}}</h4>
       </div>
+      <div>{{item.system.influence}}</div>
       <div>{{item.system.loyality}}</div>
       <div class="item-controls">
         <a class="item-control item-edit" title="Edit Item"

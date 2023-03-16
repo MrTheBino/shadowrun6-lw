@@ -58,11 +58,15 @@
   },
 
   "SHADOWRUN6.Actions":{
-    "DefenseCheck": "Verteidungsprobe"
+    "DefenseCheck": "Verteidungsprobe",
+    "MagicCheck": "Zauberprobe",
+    "MagicDrainCheck": "Entzug widerstehen"
   },
 
   "SHADOWRUN6.Help":{
-    "DefenseCheck": "Reaktion + Intuition + Mod"
+    "DefenseCheck": "Reaktion + Intuition + Mod",
+    "MagicCheck": "Hexerei + Magie + Mod",
+    "MagicDrainCheck": "(Willenskraft + Logik oder Willenskraft + Charisma) + Mod"
   },
 
   "SHADOWRUN6.Titles":{
@@ -106,10 +110,15 @@
     "armor": "Panzerung",
     "pilot": "Pilot",
     "sensor": "Sensor",
-    "seats": "Sitze"
+    "seats": "Sitze",
+    "notes": "Fahrzeugbeschreibung"
   },
 
   "SHADOWRUN6.Items":{
+    "Contact":{
+      "loyality": "Loyalität",
+      "influence": "Einfluss"
+    },
     "Armor":{
       "armor_rating": "Verteidigungswert"
     },

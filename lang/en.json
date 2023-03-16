@@ -62,11 +62,19 @@
   },
 
   "SHADOWRUN6.Actions":{
-    "DefenseCheck": "Defense Check"
+    "DefenseCheck": "Defense Check",
+    "MatrixActionLegal": "Legal Matrix Action",
+    "MatrixActionIllegal": "Illegal Matrix Action",
+    "MagicCheck":"Magic Check",
+    "MagicDrainCheck": "Drain Check"
   },
 
   "SHADOWRUN6.Help":{
-    "DefenseCheck": "Reaction + Intuition + Modifiers"
+    "DefenseCheck": "Reaction + Intuition + Modifiers",
+    "MatrixActionLegal": "Logic + Electronics + Modifiers",
+    "MatrixActionIllegal": "Logic + Cracken + Modifiers",
+    "MagicCheck": "Magic + Witchcraft + Modifiers",
+    "MagicDrainCheck": "(Willpower + Logic or Willpower + Charisma) + Modifiers"
   },
 
   "SHADOWRUN6.Titles":{
@@ -87,7 +95,10 @@
     "Character": "Character",
     "Equipment": "Equipment",
     "Notes": "Notes",
-    "Armor": "Armor"
+    "Armor": "Armor",
+    "QuickMatrixActions": "Quick Matrix Actions",
+    "QuickCombatActions": "Quick Combat Actions",
+    "QuickMagicActions": "Quick Magic Actions"
   },
 
   "SHADOWRUN6.RollDialog":{
@@ -107,7 +118,8 @@
     "armor": "Armor",
     "pilot": "Pilot",
     "sensor": "Sensor",
-    "seats": "Seats"
+    "seats": "Seats",
+    "notes": "Notes"
   },
 
   "SHADOWRUN6.Matrix": {
@@ -121,6 +133,10 @@
   },
 
   "SHADOWRUN6.Items":{
+    "Contact":{
+      "loyality": "Loyality",
+      "influence": "Influence"
+    },
     "Armor":{
       "armor_rating": "Rating"
     },

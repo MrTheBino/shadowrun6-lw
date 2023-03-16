@@ -36,7 +36,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     const actorData = this.actor.toObject(false);
 
     actorData.system.biography = await this._enrichHTML(actorData.system.biography);
-    console.log(actorData.system.biography);
+    //console.log(actorData.system.biography);
 
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = actorData.system;
@@ -46,6 +46,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     if (actorData.type == 'character') {
       this._prepareItems(context);
       this._prepareCharacterData(context);
+      this._prepareCalculations(context);
     }
 
     // Prepare NPC data and items.
@@ -60,6 +61,38 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     context.effects = prepareActiveEffectCategories(this.actor.effects);
 
     return context;
+  }
+
+  _prepareCalculations(context){
+    // matrix actions
+    let legal_skill = this._getSkillByName(context,context.actor.system.matrix.matrix_attr_legal)
+    if(legal_skill){
+      context.system.matrix_legal_action_dp = context.actor.system.attributes.logic.value + legal_skill.system.skill_rank;
+    }
+
+    let not_legal_skill = this._getSkillByName(context,context.actor.system.matrix.matrix_attr_illegal)
+    if(not_legal_skill){
+      context.system.matrix_illegal_action_dp = context.actor.system.attributes.logic.value + not_legal_skill.system.skill_rank;
+    }
+
+    let magic_skill = this._getSkillByName(context,context.actor.system.magic.spell_check_skill)
+    if(magic_skill){
+      context.system.magic_spell_check_dp = context.actor.system.attributes.magic_resonance.value + magic_skill.system.skill_rank;
+    }
+
+    if(context.actor.system.magic.drain_check_skill){
+      context.system.drain_check_dp = context.actor.system.attributes.willpower.value + context.actor.system.attributes[context.actor.system.magic.drain_check_skill].value
+    }
+  }
+
+  _getSkillByName(context,name){
+    for(let skill of context.skills){
+      if (skill.name === name){
+        return skill;
+      }
+    }
+   
+    return null;
   }
 
   /**
@@ -253,7 +286,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     const element = event.currentTarget;
     const dataset = element.dataset;
 
-    showSR6RollDialog(dataset.roll,dataset.label);
+    showSR6RollDialog(dataset.roll,dataset.label,dataset.rollposmod,dataset.rollnegmod);
   }
   /**
    * Handle clickable rolls.

@@ -1,3 +1,53 @@
+<fieldset class="shadowrun6 styled_box">
+  <legend>{{localize 'SHADOWRUN6.Titles.QuickMagicActions'}}</legend>
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <span
+        class="rolldialog"
+        data-roll="{{system.magic_spell_check_dp}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.MagicCheck'}}"
+        title="{{localize 'SHADOWRUN6.Help.MagicCheck'}}"
+      >
+        <i class="fa-solid fa-dice-five"></i> {{localize
+        'SHADOWRUN6.Actions.MagicCheck'}} ({{system.magic_spell_check_dp}})
+        </span>
+    </div>
+    <div class="flexcol"><span>{{system.attributes.magic_resonance.label}} ({{system.attributes.magic_resonance.value}})</span></div>
+    <div class="flexcol">
+        <select class="" name="system.magic.spell_check_skill" data-type="String">
+          {{#select system.magic.spell_check_skill}} {{#each skills as
+            |skill key|}}
+            <option value="{{skill.name}}">{{skill.name}} ({{skill.system.skill_rank}})</option>
+            {{/each}} {{/select}}
+        </select>
+    </div>
+  </section>
+
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <span
+        class="rolldialog"
+        data-roll="{{system.drain_check_dp}}"
+        data-label="{{localize 'SHADOWRUN6.Actions.MagicDrainCheck'}}"
+        title="{{localize 'SHADOWRUN6.Help.MagicDrainCheck'}}"
+      >
+        <i class="fa-solid fa-dice-five"></i> {{localize
+        'SHADOWRUN6.Actions.MagicDrainCheck'}} ({{system.drain_check_dp}})
+        </span>
+    </div>
+    <div class="flexcol"><span>{{system.attributes.willpower.label}} ({{system.attributes.willpower.value}})</span></div>
+    <div class="flexcol">
+        <select class="" name="system.magic.drain_check_skill" data-type="String">
+          {{#select system.magic.drain_check_skill}} {{#each system.attributes as
+            |attr key|}}
+            <option value="{{key}}">{{attr.label}} ({{attr.value}})</option>
+            {{/each}} {{/select}}
+        </select>
+    </div>
+  </section>
+
+</fieldset>
+
 <div class="shadowrun6 styled_box">
   <h2>{{localize 'SHADOWRUN6.Titles.MagicSpells'}}</h2>
   <ol class="items-list">
