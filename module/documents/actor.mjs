@@ -52,6 +52,9 @@ export class Shadowrun6Actor extends Actor {
     if (systemData.cm_physical.value > 0){
       systemData.dice_pool_mod =  Math.floor(((systemData.cm_physical.value - systemData.cm_physical.max) * -1) / 3);
     }
+    if (systemData.cm_stun.value > 0){
+      systemData.dice_pool_mod +=  Math.floor(((systemData.cm_stun.value - systemData.cm_stun.max) * -1) / 3);
+    }
     
     // defense data
     systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.intuition.value)

@@ -11,8 +11,8 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["shadowrun6", "sheet", "actor"],
       template: "systems/shadowrun6-lw/templates/actor/actor-sheet.html",
-      width: 700,
-      height: 600,
+      width: 800,
+      height: 700,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "features" }]
     });
   }
@@ -285,8 +285,16 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     event.preventDefault();
     const element = event.currentTarget;
     const dataset = element.dataset;
+    const actorData = this.actor.toObject(false);
 
-    showSR6RollDialog(dataset.roll,dataset.label,dataset.rollposmod,dataset.rollnegmod);
+    let negmod = 0;
+    if(dataset.rollnegmod){
+      negmod = parseInt(dataset.rollnegmod) + actorData.system.dice_pool_mod;
+    }else{
+      negmod = actorData.system.dice_pool_mod;
+    }
+    
+    showSR6RollDialog(dataset.roll,dataset.label,dataset.rollposmod,negmod);
   }
   /**
    * Handle clickable rolls.

@@ -78,6 +78,8 @@
   },
 
   "SHADOWRUN6.Titles":{
+    "PhysicalDamage": "Physical Damage",
+    "StunDamage": "Stun Damage",
     "MagicSpells": "Spells / Preparations Riturals / Complex Forms",
     "AdeptPowersAndOthers": "Adept Powers and other abilities",
     "Qualities": "Qualities",
