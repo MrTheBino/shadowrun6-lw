@@ -2,6 +2,11 @@
   font-family: $font-primary;
 }
 
+.window-content{
+  background:none !important;
+  background-color: white !important;
+}
+
 .rollable {
   &:hover,
   &:focus {

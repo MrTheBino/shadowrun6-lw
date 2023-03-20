@@ -1,4 +1,4 @@
-<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+<form class="{{cssClass}} {{actor.type}} flexcol sheet-background" autocomplete="off">
   {{!-- Sheet Header --}}
   <header class="sheet-header">
     <img
@@ -21,14 +21,14 @@
           <legend>{{localize 'SHADOWRUN6.Titles.PhysicalDamage'}}</legend>
 
           <div class="flexrow">
-            <div class="flexrow">
+            <div class="flexrow" style="flex: 0 0 100px">
               <input
                 type="text"
                 name="system.cm_physical.value"
                 value="{{system.cm_physical.value}}"
                 data-dtype="Number"
               />
-              <span> / </span>
+              <span class="flex-null" style="width: 20px; padding:4px;"> / </span>
               <input
                 type="text"
                 name="system.cm_physical.max"
@@ -50,14 +50,14 @@
         <fieldset class="shadowrun6 styled_box">
           <legend>{{localize 'SHADOWRUN6.Titles.StunDamage'}}</legend>
           <div class="flexrow">
-              <div class="flexrow">
+              <div class="flexrow" style="flex: 0 0 100px">
                 <input
                   type="text"
                   name="system.cm_stun.value"
                   value="{{system.cm_stun.value}}"
                   data-dtype="Number"
                 />
-                <span> / </span>
+                <span class="flex-null" style="width: 20px; padding:4px;"> / </span>
                 <input
                   type="text"
                   name="system.cm_stun.max"
@@ -81,15 +81,15 @@
               Dice Pool Mod: {{system.dice_pool_mod}}
             </div>
             <div class="flexrow flex-group-center">
-              <span
+              <label
                 >Edge ({{system.attributes.edge.value}}):
-                <input
+              </label>
+              <input
                   type="text"
                   name="system.edge_points.value"
                   value="{{system.edge_points.value}}"
                   data-dtype="Number"
                 />
-              </span>
             </div>
             <div class="flexrow flex-group-center">
               <a class="rolldialog" data-roll="0"
