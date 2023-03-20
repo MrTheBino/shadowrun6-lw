@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc"],
+    "types": ["character", "npc","vehicle"],
     "templates": {
       "base": {
         "health": {
@@ -195,6 +195,35 @@
           "value": 0
         },
         "resonance":{
+          "value": 0
+        }
+      }
+    },
+    "vehicle":{
+      "templates": ["base"],
+      "attributes":{
+        "handling":{
+          "value": 0
+        },
+        "acceleration":{
+          "value": 0
+        },
+        "maximum_speed":{
+          "value": 0
+        },
+        "speed_interval":{
+          "value": 0
+        },
+        "hull":{
+          "value": 0
+        },
+        "armor":{
+          "value": 0
+        },
+        "pilot":{
+          "value": 0
+        },
+        "sensor":{
           "value": 0
         }
       }

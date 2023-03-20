@@ -1,0 +1,161 @@
+<div class="shadowrun6 styled_box">
+  <section class="grid grid-8col">
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.handling.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeHandling'}}"
+      title="{{localize 'SHADOWRUN6.AttributHandling'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeHandling'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.acceleration.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeAcceleration'}}"
+      title="{{localize 'SHADOWRUN6.AttributeAcceleration'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeAcceleration'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.maximum_speed.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeMaximumSpeed'}}"
+      title="{{localize 'SHADOWRUN6.AttributeMaximumSpeed'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeMaximumSpeed'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.speed_interval.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeSpeedInterval'}}"
+      title="{{localize 'SHADOWRUN6.AttributeSpeedInterval'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeSpeedInterval'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.hull.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeHull'}}"
+      title="{{localize 'SHADOWRUN6.AttributeHull'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeHull'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.armor.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeArmor'}}"
+      title="{{localize 'SHADOWRUN6.AttributeArmor'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeArmor'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.pilot.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributePilot'}}"
+      title="{{localize 'SHADOWRUN6.AttributePilot'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributePilot'}}
+    </div>
+    <div
+      class="flexcol rolldialog"
+      data-roll="{{system.attributes.sensor.value}}"
+      data-label="{{localize 'SHADOWRUN6.AttributeSensor'}}"
+      title="{{localize 'SHADOWRUN6.AttributeSensor'}}"
+    >
+      {{localize 'SHADOWRUN6.AttributeSensor'}}
+    </div>
+  </section>
+  <section class="grid grid-8col">
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.handling.value"
+        value="{{system.attributes.handling.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.acceleration.value"
+        value="{{system.attributes.acceleration.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.speed_interval.value"
+        value="{{system.attributes.speed_interval.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.maximum_speed.value"
+        value="{{system.attributes.maximum_speed.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.hull.value"
+        value="{{system.attributes.hull.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.armor.value"
+        value="{{system.attributes.armor.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.pilot.value"
+        value="{{system.attributes.pilot.value}}"
+        data-dtype="Number"
+      />
+    </div>
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.sensor.value"
+        value="{{system.attributes.sensor.value}}"
+        data-dtype="Number"
+      />
+    </div>
+  </section>
+</div>
+
+<div class="shadowrun6 styled_box">
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <label
+        for="system.attributes.initiative.value"
+        class="resource-label rollable flexlarge align-left"
+        data-roll="{{system.attributes.initiative.value}}"
+        data-label="Initiative"
+        >Initiative</label
+      >
+    </div>
+  </section>
+  <section class="grid grid-3col">
+    <div class="flexcol">
+      <input
+        type="text"
+        name="system.attributes.initiative.value"
+        value="{{system.attributes.initiative.value}}"
+        data-dtype="String"
+      />
+    </div>
+  </section>
+</div>
+<h3>Description</h3>
+{{editor system.biography target="system.biography" rollData=rollData
+button=true owner=owner editable=editable}}

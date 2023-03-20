@@ -76,17 +76,6 @@
               Dice Pool Mod: {{system.dice_pool_mod}}
             </div>
             <div class="flexrow flex-group-center">
-              <label
-                >Edge:
-              </label>
-              <input
-                  type="text"
-                  name="system.edge_points.value"
-                  value="{{system.edge_points.value}}"
-                  data-dtype="Number"
-                />
-            </div>
-            <div class="flexrow flex-group-center">
               <a class="rolldialog" data-roll="0"
                 ><i class="fa-solid fa-dice-five"></i> Open Roll Dialog</a
               >
@@ -100,15 +89,15 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="minion">Minion</a>
+    <a class="item" data-tab="vehicle">Vehicle</a>
   </nav>
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
 
     {{!-- Minion Tab --}}
-    <div class="tab minion" data-group="primary" data-tab="minion">
-      {{> "systems/shadowrun6-lw/templates/actor/parts/actor-minion.html"}}
+    <div class="tab vehicle" data-group="primary" data-tab="vehicle">
+      {{> "systems/shadowrun6-lw/templates/actor/parts/actor-vehicle-npc.html"}}
     </div>
   </section>
 </form>

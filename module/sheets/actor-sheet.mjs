@@ -224,6 +224,12 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     // Add Inventory Item
     html.find('.item-create').click(this._onItemCreate.bind(this));
 
+    // Click CM Physical Click
+    html.find('.cm_click_physical').click(this._onClickCmPhyisical.bind(this));
+
+    // Click CM Stun Click
+    html.find('.cm_click_stun').click(this._onClickCmStun.bind(this));
+
     // Delete Inventory Item
     html.find('.item-delete').click(ev => {
       const li = $(ev.currentTarget).parents(".item");
@@ -248,6 +254,28 @@ export class Shadowrun6ActorSheet extends ActorSheet {
         li.addEventListener("dragstart", handler, false);
       });
     }
+  }
+
+  _onClickCmPhyisical(event){
+    event.preventDefault();
+    const header = event.currentTarget;
+    const new_value = parseInt(header.dataset.value) + 1;
+
+
+    this.actor.system.cm_physical.value = new_value;
+    this.actor.prepareDerivedData()
+    this.render(true);
+  }
+
+  _onClickCmStun(event){
+    event.preventDefault();
+    const header = event.currentTarget;
+    const new_value = parseInt(header.dataset.value) + 1;
+
+
+    this.actor.system.cm_stun.value = new_value;
+    this.actor.prepareDerivedData()
+    this.render(true);
   }
 
   /**
