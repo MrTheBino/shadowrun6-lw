@@ -1,4 +1,6 @@
 {
+  "SHADOWRUN6.AttributeCmPhysical": "Physical Damage",
+  "SHADOWRUN6.AttributeCmStun": "Stun Damage",
   "SHADOWRUN6.AttributeLevel": "Level",
   "SHADOWRUN6.AttributeBody": "Body",
   "SHADOWRUN6.AttributeAgility": "Agility",
@@ -66,7 +68,11 @@
   
   "SHADOWRUN6.Labels":{
     "Attributes": "Attributes",
-    "Description": "Description"
+    "Description": "Description",
+    "DicePoolMod": "Dice Pool Mod",
+    "OpenRollDialog": "Open Roll Dialog",
+    "Vehicle": "Vehicle",
+    "Minion": "Minion / NPC"
   },
 
   "SHADOWRUN6.Actions":{

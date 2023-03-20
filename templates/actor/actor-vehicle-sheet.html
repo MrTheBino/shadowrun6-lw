@@ -13,7 +13,7 @@
         will add a small amount of padding, a border, and will center all of its
         child elements content and text. --}}
         <fieldset class="shadowrun6 styled_box">
-          <legend>{{localize 'SHADOWRUN6.Titles.PhysicalDamage'}}</legend>
+          <legend>{{localize 'SHADOWRUN6.AttributeCmPhysical'}}</legend>
 
           <div class="flexrow">
             <div class="flexrow" style="flex: 0 0 100px">
@@ -43,7 +43,7 @@
         </fieldset>
 
         <fieldset class="shadowrun6 styled_box">
-          <legend>{{localize 'SHADOWRUN6.Titles.StunDamage'}}</legend>
+          <legend>{{localize 'SHADOWRUN6.AttributeCmStun'}}</legend>
           <div class="flexrow">
               <div class="flexrow" style="flex: 0 0 100px">
                 <input
@@ -73,11 +73,11 @@
         <div class="styled_box">
           <div class="resource-content flexrow flex-center flex-between">
             <div class="flexrow flex-group-center">
-              Dice Pool Mod: {{system.dice_pool_mod}}
+              {{localize 'SHADOWRUN6.Labels.DicePoolMod'}}: {{system.dice_pool_mod}}
             </div>
             <div class="flexrow flex-group-center">
               <a class="rolldialog" data-roll="0"
-                ><i class="fa-solid fa-dice-five"></i> Open Roll Dialog</a
+                ><i class="fa-solid fa-dice-five"></i> {{localize 'SHADOWRUN6.Labels.OpenRollDialog'}}</a
               >
             </div>
           </div>
@@ -89,7 +89,7 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     {{!-- Default tab is specified in actor-sheet.mjs --}}
-    <a class="item" data-tab="vehicle">Vehicle</a>
+    <a class="item" data-tab="vehicle">{{localize 'SHADOWRUN6.Labels.Vehicle'}}</a>
   </nav>
 
   {{!-- Sheet Body --}}

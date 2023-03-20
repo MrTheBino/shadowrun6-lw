@@ -2,7 +2,7 @@
 
 ![Foundry v10](https://img.shields.io/badge/foundry-v10-green)
 
-This system is a Shadowrun 6 lightweight implementation. It's easy to use and no auto calculations are done. Everything can be entered manually.
+This system is a Shadowrun 6 lightweight implementation. It's easy to use and almost no auto calculations are done. Everything can be entered manually.
 There's a simple roll dialog and you can do manual dice pool rolls with the chat command **/srr X**.
 The system doesn't include any book materials and you will have to enter it for yourself.
 This system is completely Unofficial.
@@ -11,6 +11,7 @@ This system is completely Unofficial.
 
 * character sheet
 * minion / npc sheet
+* vehicle sheet
 * simple roll dialog and dice pool roll command
 
 
@@ -39,8 +40,15 @@ You can reach me on Discord via MrTheBino#7878
 
 ## Changelog:
 
+### v0.3
+
+* added UI improvements
+* added translations
+* added vehicle actor
+* dice pool modificator gets calculated referencing the condition monitor
+
 ### v0.2
 
 * first public release
 
-![alt text](shadowrun6-lw-0.2.jpg "Shadowrun 6 Leightweight Reference Image")
+![alt text](shadowrun6-lw-0.3.png "Shadowrun 6 Leightweight Reference Image")

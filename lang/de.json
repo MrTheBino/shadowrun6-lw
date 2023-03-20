@@ -1,4 +1,6 @@
 {
+  "SHADOWRUN6.AttributeCmPhysical": "Körperlicher Schaden",
+  "SHADOWRUN6.AttributeCmStun": "Betäubungsschaden",
   "SHADOWRUN6.AttributeBody": "Konstitution",
   "SHADOWRUN6.AttributeAgility": "Geschicklichkeit",
   "SHADOWRUN6.AttributeReaction": "Reaktion",
@@ -21,6 +23,14 @@
   "SHADOWRUN6.AttributeLiftCarry": "Heben/Tragen",
   "SHADOWRUN6.AttributeMovement": "Bewegung",
   "SHADOWRUN6.AttributeDefenseRating": "Verteidigungswert",
+  "SHADOWRUN6.AttributeHandling": "Handl.",
+  "SHADOWRUN6.AttributeAcceleration": "Beschl.",
+  "SHADOWRUN6.AttributeSpeedInterval": "Geschw-Int.",
+  "SHADOWRUN6.AttributeMaximumSpeed": "Höchstgeschw.",
+  "SHADOWRUN6.AttributeHull": "Rump",
+  "SHADOWRUN6.AttributeArmor": "Panz.",
+  "SHADOWRUN6.AttributePilot": "Pilot",
+  "SHADOWRUN6.AttributeSensor": "Sensor",
 
   "SHADOWRUN6.AttributeBodyAbbr": "body",
   "SHADOWRUN6.AttributeAgilityAbbr": "agility",
@@ -54,7 +64,11 @@
 
   "SHADOWRUN6.Labels":{
     "Attributes": "Attribute",
-    "Description": "Beschreibung"
+    "Description": "Beschreibung",
+    "DicePoolMod": "Würfelpoolmodifikator",
+    "OpenRollDialog": "Würfel Dialog öffnen",
+    "Vehicle": "Fahrzeug",
+    "Minion": "Scherge / NPC"
   },
 
   "SHADOWRUN6.Actions":{
