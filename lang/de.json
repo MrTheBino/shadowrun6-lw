@@ -90,7 +90,11 @@
   "SHADOWRUN6.Help":{
     "DefenseCheck": "Reaktion + Intuition + Mod",
     "MagicCheck": "Hexerei + Magie + Mod",
-    "MagicDrainCheck": "(Willenskraft + Logik oder Willenskraft + Charisma) + Mod"
+    "MagicDrainCheck": "(Willenskraft + Logik oder Willenskraft + Charisma) + Mod",
+    "Composure": "Willenskraft + Charisma",
+    "JudgeIntentions": "Willenskraft + Intuition",
+    "Memory": "Logik + Intuition",
+    "LiftCarry": "Konstitution + Willenskraft"
   },
 
   "SHADOWRUN6.Titles":{

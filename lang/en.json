@@ -92,13 +92,17 @@
     "DefenseRating": "Defense Rating",
     "AttackRating": "Attack Rating"
   },
-  
+
   "SHADOWRUN6.Help":{
     "DefenseCheck": "Reaction + Intuition + Modifiers",
     "MatrixActionLegal": "Logic + Electronics + Modifiers",
     "MatrixActionIllegal": "Logic + Cracken + Modifiers",
     "MagicCheck": "Magic + Witchcraft + Modifiers",
-    "MagicDrainCheck": "(Willpower + Logic or Willpower + Charisma) + Modifiers"
+    "MagicDrainCheck": "(Willpower + Logic or Willpower + Charisma) + Modifiers",
+    "Composure": "Willpower + Charisma",
+    "JudgeIntentions": "Willpower + Intuition",
+    "Memory": "Logic + Intuition",
+    "LiftCarry": "Body + Willpower"
   },
 
   "SHADOWRUN6.Titles":{
