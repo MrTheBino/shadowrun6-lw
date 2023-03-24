@@ -1,0 +1,54 @@
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+  {{!-- Sheet Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+      {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+      use both the "grid" and "grid-Ncol" class where "N" can be any number
+      from 1 to 12 and will create that number of columns.  --}}
+      <div class="">
+        {{!-- "flex-group-center" is also defined in the _grid.scss file and it
+        will add a small amount of padding, a border, and will center all of its
+        child elements content and text. --}}
+
+        <div class="styled_box">
+          <div class="resource-content flexrow flex-center flex-between">
+            <div class="flexrow flex-group-center">
+              <a class="rolldialog" data-roll="{{system.defense_rating}}" data-label="{{localize 'SHADOWRUN6.MatrixEntity.DefenseRating'}}"><i class="fa-solid fa-dice-five"></i>
+              {{localize 'SHADOWRUN6.MatrixEntity.DefenseRating'}}: {{system.defense_rating}}
+            </a>
+            </div>
+            <div class="flexrow flex-group-center">
+              <a class="rolldialog" data-roll="{{system.attack_rating}}" data-label="{{localize 'SHADOWRUN6.MatrixEntity.AttackRating'}}"><i class="fa-solid fa-dice-five"></i>
+              {{localize 'SHADOWRUN6.MatrixEntity.AttackRating'}}: {{system.attack_rating}}
+            </a>
+            </div>
+            <div class="flexrow flex-group-center">
+              <a class="rolldialog" data-roll="0" 
+                ><i class="fa-solid fa-dice-five"></i> {{localize 'SHADOWRUN6.Labels.OpenRollDialog'}}</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tab Navigation --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    {{!-- Default tab is specified in actor-sheet.mjs --}}
+    <a class="item" data-tab="vehicle">{{localize 'SHADOWRUN6.Titles.MatrixEntity'}}</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+
+    {{!-- Minion Tab --}}
+    <div class="tab vehicle" data-group="primary" data-tab="vehicle">
+      {{> "systems/shadowrun6-lw/templates/actor/parts/actor-matrix-entity.html"}}
+    </div>
+  </section>
+</form>
+

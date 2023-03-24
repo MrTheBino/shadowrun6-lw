@@ -83,6 +83,16 @@
     "MagicDrainCheck": "Drain Check"
   },
 
+  "SHADOWRUN6.MatrixEntity":{
+    "Overwatch": "Overwatch",
+    "Attack": "Attack",
+    "Sneak": "Sneak",
+    "DataProcessing": "Data Processing",
+    "Firewall": "Firewall",
+    "DefenseRating": "Defense Rating",
+    "AttackRating": "Attack Rating"
+  },
+  
   "SHADOWRUN6.Help":{
     "DefenseCheck": "Reaction + Intuition + Modifiers",
     "MatrixActionLegal": "Logic + Electronics + Modifiers",
@@ -92,6 +102,7 @@
   },
 
   "SHADOWRUN6.Titles":{
+    "MatrixEntity": "Matrix Entity",
     "PhysicalDamage": "Physical Damage",
     "StunDamage": "Stun Damage",
     "MagicSpells": "Spells / Preparations Riturals / Complex Forms",

@@ -1,0 +1,61 @@
+<div class="shadowrun6 styled_box">
+  
+  
+    <div class="flexrow grid">
+      <label for="system.attributes.overwatch" class="resource-label">{{localize 'SHADOWRUN6.MatrixEntity.Overwatch'}}</label>
+      <input
+        type="text"
+        name="system.attributes.overwatch.value"
+        value="{{system.attributes.overwatch.value}}"
+        data-dtype="Number"
+        class="flex3"
+      />
+    </div>
+  
+    <div class="flexrow grid">
+      <label for="system.attributes.attack" class="resource-label">{{localize 'SHADOWRUN6.MatrixEntity.Attack'}}</label>
+      <input
+        type="text"
+        name="system.attributes.attack.value"
+        value="{{system.attributes.attack.value}}"
+        data-dtype="Number"
+        class="flex3"
+      />
+    </div>
+
+    <div class="flexrow grid">
+      <label for="system.attributes.sneak" class="resource-label">{{localize 'SHADOWRUN6.MatrixEntity.Sneak'}}</label>
+      <input
+        type="text"
+        name="system.attributes.sneak.value"
+        value="{{system.attributes.sneak.value}}"
+        data-dtype="Number"
+        class="flex3"
+      />
+    </div>
+
+    <div class="flexrow grid">
+      <label for="system.attributes.data_processing" class="resource-label">{{localize 'SHADOWRUN6.MatrixEntity.DataProcessing'}}</label>
+      <input
+        type="text"
+        name="system.attributes.data_processing.value"
+        value="{{system.attributes.data_processing.value}}"
+        data-dtype="Number"
+        class="flex3"
+      />
+    </div>
+
+    <div class="flexrow grid">
+      <label for="system.attributes.firewall" class="resource-label">{{localize 'SHADOWRUN6.MatrixEntity.Firewall'}}</label>
+      <input
+        type="text"
+        name="system.attributes.firewall.value"
+        value="{{system.attributes.firewall.value}}"
+        data-dtype="Number"
+        class="flex3"
+      />
+    </div>
+  </div>
+<h3>{{localize 'SHADOWRUN6.Labels.Description'}}</h3>
+{{editor system.biography target="system.biography" rollData=rollData
+button=true owner=owner editable=editable}}

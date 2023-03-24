@@ -38,6 +38,7 @@ export class Shadowrun6Actor extends Actor {
     this._prepareCharacterData(actorData);
     this._prepareNpcData(actorData);
     this._prepareVehicleNpcData(actorData);
+    this._prepareMatrixEntityData(actorData);
   }
 
   /**
@@ -85,6 +86,14 @@ export class Shadowrun6Actor extends Actor {
 
     // defense data
     systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.intuition.value)
+  }
+
+  _prepareMatrixEntityData(actorData){
+    if (actorData.type !== 'matrix_entity') return;
+
+    const systemData = actorData.system;
+    systemData.defense_rating = systemData.attributes.data_processing.value + systemData.attributes.firewall.value;
+    systemData.attack_rating = systemData.attributes.attack.value + systemData.attributes.sneak.value;
   }
 
   _prepareVehicleNpcData(actorData) {

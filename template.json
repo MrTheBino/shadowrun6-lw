@@ -1,6 +1,6 @@
 {
   "Actor": {
-    "types": ["character", "npc","vehicle"],
+    "types": ["character", "npc","vehicle","matrix_entity"],
     "templates": {
       "base": {
         "health": {
@@ -226,6 +226,16 @@
         "sensor":{
           "value": 0
         }
+      }
+    },
+    "matrix_entity":{
+      "templates": ["base"],
+      "attributes":{
+        "overwatch": {"value": 0},
+        "attack": {"value": 0},
+        "sneak": {"value": 0},
+        "data_processing": {"value": 0},
+        "firewall": {"value": 0}
       }
     }
   },

@@ -12,6 +12,7 @@ This system is completely Unofficial.
 * character sheet
 * minion / npc sheet
 * vehicle sheet
+* basic matrix actor sheet
 * simple roll dialog and dice pool roll command
 
 
@@ -45,6 +46,7 @@ You can reach me on Discord via MrTheBino#7878
 * added UI improvements
 * added translations
 * added vehicle actor
+* added basic matrix actor
 * dice pool modificator gets calculated referencing the condition monitor
 
 ### v0.2

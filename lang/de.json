@@ -71,6 +71,16 @@
     "Minion": "Scherge / NPC"
   },
 
+  "SHADOWRUN6.MatrixEntity":{
+    "Overwatch": "Overwatch",
+    "Attack": "Angriff",
+    "Sneak": "Schleicher",
+    "DataProcessing": "Datenverarbeitung",
+    "Firewall": "Firewall",
+    "DefenseRating": "Verteidigungswert",
+    "AttackRating": "Angriffswert"
+  },
+
   "SHADOWRUN6.Actions":{
     "DefenseCheck": "Verteidungsprobe",
     "MagicCheck": "Zauberprobe",
