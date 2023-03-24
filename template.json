@@ -298,7 +298,8 @@
     },
     "adept_power": {
       "templates": ["base"],
-      "level": 0
+      "level": 0,
+      "costs": 0
     },
     "magic_spell": {
       "templates": ["base"],

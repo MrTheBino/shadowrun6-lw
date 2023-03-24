@@ -191,7 +191,8 @@
     },
     "AdeptPower":{
       "name": "Name",
-      "level": "Stufe"
+      "level": "Stufe",
+      "costs": "Kosten (KP)"
     },
     "MagicSpell": {
       "name": "Name",

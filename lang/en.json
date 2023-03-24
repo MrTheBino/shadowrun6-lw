@@ -207,7 +207,8 @@
     },
     "AdeptPower":{
       "name": "Name",
-      "level": "Level"
+      "level": "Level",
+      "costs": "Costs"
     },
     "Gear":{
       "name": "Name",
