@@ -102,7 +102,9 @@
     "Composure": "Willpower + Charisma",
     "JudgeIntentions": "Willpower + Intuition",
     "Memory": "Logic + Intuition",
-    "LiftCarry": "Body + Willpower"
+    "LiftCarry": "Body + Willpower",
+    "UnarmedArmor": "Reaction + Strength",
+    "DefenseRatingSC": "Constitution + Armor + Mods"
   },
 
   "SHADOWRUN6.Titles":{
