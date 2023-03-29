@@ -85,6 +85,21 @@ Handlebars.registerHelper('localizeAttribute', function(str) {
   return game.i18n.localize(SHADOWRUN6.attributes_localization_matching[str]);
 });
 
+Handlebars.registerHelper('textNotEmpty', function(str) {
+  if(str && str.length > 0){
+    return true;
+  }
+  return false;
+});
+
+Handlebars.registerHelper('check', function(value,options) {
+  if(value && value.length > 0){
+    return options.fn(this)
+        
+  }
+  return options.inverse(this);;
+});
+
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });

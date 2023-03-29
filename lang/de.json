@@ -96,7 +96,8 @@
     "Memory": "Logik + Intuition",
     "LiftCarry": "Konstitution + Willenskraft",
     "UnarmedArmor": "Reaktion + Stärke",
-    "DefenseRatingSC": "Konstitution + Panzerung + Mods"
+    "DefenseRatingSC": "Konstitution + Panzerung + Mods",
+    "ShortDescription": "kurze Beschreibung für den Tooltip"
   },
 
   "SHADOWRUN6.Titles":{

@@ -83,9 +83,12 @@
       </div>
     </li>
     {{#each magic_spells as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.sprcf}}</div>
       <div>{{item.system.type_target}}</div>
@@ -130,9 +133,12 @@
       </div>
     </li>
     {{#each adept_powers as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.level}}</div>
       <div>{{item.system.costs}}</div>

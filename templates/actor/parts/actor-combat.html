@@ -37,9 +37,12 @@
       </div>
     </li>
     {{#each ranged_weapons as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.weapon_damage}}</div>
       <div>{{item.system.weapon_mode}}</div>
@@ -79,9 +82,12 @@
       </div>
     </li>
     {{#each melee_weapons as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.weapon_damage}}</div>
       <div>{{item.system.weapon_r_close}}</div>
@@ -115,9 +121,12 @@
       </div>
     </li>
     {{#each equipment_armor as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.armor_rating}}</div>
       <div class="item-controls">

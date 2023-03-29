@@ -15,9 +15,12 @@
       </div>
     </li>
     {{#each augmentations as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.rating}}</div>
       <div>{{item.system.essence}}</div>
@@ -46,9 +49,12 @@
       </div>
     </li>
     {{#each gear as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-name">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
+      <div class="item-name" >
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.rating}}</div>
       <div class="item-controls">

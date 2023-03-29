@@ -243,7 +243,8 @@
     "types": ["item", "feature", "spell","skill","ranged_weapon","melee_weapon","armor","contact","gear","augmentation","quality","adept_power","magic_spell"],
     "templates": {
       "base": {
-        "description": ""
+        "description": "",
+        "short_description": ""
       }
     },
     "skill":{

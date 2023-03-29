@@ -120,7 +120,7 @@
       </div>
     </li>
     {{#each contacts as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
+    <li class="item flexrow tooltip" data-item-id="{{item._id}}">
       <div class="item-name">
         <div class="item-image">
           <a
@@ -133,6 +133,9 @@
           ></a>
         </div>
         <h4>{{item.name}}</h4>
+        {{#check item.system.short_description}}
+          <span class="tooltiptext">{{item.system.short_description}}</span>
+        {{/check}}
       </div>
       <div>{{item.system.influence}}</div>
       <div>{{item.system.loyality}}</div>
@@ -209,9 +212,12 @@
         </div>
       </li>
       {{#each qualities as |item id|}}
-      <li class="item flexrow" data-item-id="{{item._id}}">
+      <li class="item flexrow tooltip" data-item-id="{{item._id}}">
         <div class="item-name">
           <h4>{{item.name}}</h4>
+          {{#check item.system.short_description}}
+            <span class="tooltiptext">{{item.system.short_description}}</span>
+          {{/check}}
         </div>
         <div>{{item.system.type}}</div>
         <div class="item-controls">
