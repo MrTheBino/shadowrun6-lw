@@ -194,6 +194,7 @@
       "weapon_mode": "Mode",
       "weapon_r_close": "Close",
       "weapon_r_near": "Near",
+      "weapon_r_middle": "Middle",
       "weapon_r_far": "Far",
       "weapon_r_extreme": "Extreme",
       "weapon_ammo": "Ammo",
