@@ -47,7 +47,22 @@ export class Shadowrun6ItemSheet extends ItemSheet {
     // Add the actor's data to context.data for easier access, as well as flags.
     context.system = itemData.system;
     context.flags = itemData.flags;
-    context.char_attributes  = game.system.template.Actor.character.attributes;
+
+    let t_atts = {}
+    for (const [key, value] of Object.entries(game.system.template.Actor.character.attributes)) {
+      if(!key.includes("_mod")){
+        t_atts[key] = value
+      }
+    }
+
+    const t_skills = [];
+    for (let i of actor.items) {
+      if (i.type === 'skill') {
+        t_skills.push(i);
+      }
+    }
+    context.char_skills = t_skills;
+    context.char_attributes  = t_atts
     context.char_skill_types = {A:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.attribute')},K:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.knowledge')}};
     
     return context;

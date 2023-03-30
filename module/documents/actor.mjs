@@ -59,7 +59,25 @@ export class Shadowrun6Actor extends Actor {
     }
     
     // defense data
-    systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.intuition.value)
+    systemData.defense_check = (systemData.attributes.reaction.value + systemData.attributes.reaction_mod.value + systemData.attributes.intuition.value + systemData.attributes.intuition_mod.value)
+
+    // attribute modifiers
+    systemData.attr_body_total =  systemData.attributes.body.value + systemData.attributes.body_mod.value;
+    systemData.attr_agility_total =  systemData.attributes.agility.value + systemData.attributes.agility_mod.value;
+    systemData.attr_magic_resonance_total = systemData.attributes.magic_resonance.value + systemData.attributes.magic_resonance_mod.value;
+    systemData.attr_reaction_total = systemData.attributes.reaction.value + systemData.attributes.reaction_mod.value;
+    systemData.attr_strength_total = systemData.attributes.strength.value + systemData.attributes.strength_mod.value;
+    systemData.attr_willpower_total = systemData.attributes.willpower.value + systemData.attributes.willpower_mod.value;
+    systemData.attr_logic_total = systemData.attributes.logic.value + systemData.attributes.logic_mod.value;
+    systemData.attr_composure_total = systemData.attributes.composure.value + systemData.attributes.composure_mod.value;
+    systemData.attr_intuition_total = systemData.attributes.intuition.value + systemData.attributes.intuition_mod.value;
+    systemData.attr_judge_intentions_total = systemData.attributes.judge_intentions.value + systemData.attributes.judge_intentions_mod.value;
+    systemData.attr_charisma_total = systemData.attributes.charisma.value + systemData.attributes.charisma_mod.value;
+    systemData.attr_memory_total = systemData.attributes.memory.value + systemData.attributes.memory_mod.value;
+    systemData.attr_lift_carry_total = systemData.attributes.lift_carry.value + systemData.attributes.lift_carry_mod.value;
+    systemData.attr_unarmed_ar_total = systemData.attributes.unarmed_ar.value + systemData.attributes.unarmed_ar_mod.value;
+    systemData.attr_defense_rating_total = systemData.attributes.defense_rating.value + systemData.attributes.defense_rating_mod.value;
+    
     
     // Loop through ability scores, and add their modifiers to our sheet output.
     /*for (let [key, ability] of Object.entries(systemData.abilities)) {

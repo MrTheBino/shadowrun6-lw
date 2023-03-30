@@ -1,0 +1,32 @@
+<div class="attribute_group flexrow">
+  <label
+    for="system.attributes.{{attrName}}.value"
+    class="resource-label rolldialog align-left"
+    data-roll="{{totalAttrVal system attrName}}"
+    data-label="{{contextAttribute.label}}"
+    title="{{contextAttribute.helpTitle}}"
+    ><i class="fa-solid fa-dice-five" style="margin-top: 8px"></i>
+    {{contextAttribute.label}}</label
+  >
+  <div class="flexrow" style="flex: 0 0 200px">
+    <input
+      type="text"
+      name="system.attributes.{{attrName}}.value"
+      value="{{contextAttribute.value}}"
+      data-dtype="Number"
+      class=""
+      style="flex: 0 0 40px"
+      title="{{localize
+        "SHADOWRUN6.Help.BaseValue"}}"
+    />
+    <span class="flex-null" style="width: 20px; padding: 4px">+</span>
+    <input type="text" name="system.attributes.{{attrName}}_mod.value"
+    value="{{contextAttrMod.value}}" data-dtype="Number"
+    class="" style="flex: 0 0 40px" title="{{localize
+    "SHADOWRUN6.Help.ModValue"}}" />
+    <span class="flex-null" style="padding: 4px"
+      >{{localize 'SHADOWRUN6.Labels.DicePoolShort'}} {{totalAttrVal system
+      attrName}}</span
+    >
+  </div>
+</div>

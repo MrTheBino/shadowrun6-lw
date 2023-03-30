@@ -67,21 +67,21 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     // matrix actions
     let legal_skill = this._getSkillByName(context,context.actor.system.matrix.matrix_attr_legal)
     if(legal_skill){
-      context.system.matrix_legal_action_dp = context.actor.system.attributes.logic.value + legal_skill.system.skill_rank;
+      context.system.matrix_legal_action_dp = context.actor.system.attributes.logic.value + context.actor.system.attributes.logic_mod.value + legal_skill.system.skill_rank;
     }
 
     let not_legal_skill = this._getSkillByName(context,context.actor.system.matrix.matrix_attr_illegal)
     if(not_legal_skill){
-      context.system.matrix_illegal_action_dp = context.actor.system.attributes.logic.value + not_legal_skill.system.skill_rank;
+      context.system.matrix_illegal_action_dp = context.actor.system.attributes.logic.value + context.actor.system.attributes.logic_mod.value + not_legal_skill.system.skill_rank;
     }
 
     let magic_skill = this._getSkillByName(context,context.actor.system.magic.spell_check_skill)
     if(magic_skill){
-      context.system.magic_spell_check_dp = context.actor.system.attributes.magic_resonance.value + magic_skill.system.skill_rank;
+      context.system.magic_spell_check_dp = context.actor.system.attributes.magic_resonance.value + context.actor.system.attributes.magic_resonance_mod.value + magic_skill.system.skill_rank;
     }
 
     if(context.actor.system.magic.drain_check_skill){
-      context.system.drain_check_dp = context.actor.system.attributes.willpower.value + context.actor.system.attributes[context.actor.system.magic.drain_check_skill].value
+      context.system.drain_check_dp = context.actor.system.attributes.willpower.value + context.actor.system.attributes.willpower_mod.value + context.actor.system.attributes[context.actor.system.magic.drain_check_skill].value
     }
   }
 
@@ -106,6 +106,7 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     // Handle ability scores.
     for (let [k, v] of Object.entries(context.system.attributes)) {
       v.label = game.i18n.localize(CONFIG.SHADOWRUN6.attributes[k]) ?? k;
+      v.helpTitle = game.i18n.localize("SHADOWRUN6.AttrHelpTitle."+ k) ?? k;
     }
   }
 

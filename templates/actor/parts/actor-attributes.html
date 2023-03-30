@@ -1,344 +1,59 @@
 <div class="shadowrun6 styled_box">
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.body.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.body.value}}"
-      data-label="{{system.attributes.body.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.body.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.body.value"
-      value="{{system.attributes.body.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.essence.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.essence.value}}"
-      data-label="{{system.attributes.essence.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.essence.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.essence.value"
-      value="{{system.attributes.essence.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.body  contextAttrMod=system.attributes.body_mod attrName="body"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.essence  attrName="essence"}}
+    
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.agility.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.agility.value}}"
-      data-label="{{system.attributes.agility.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.agility.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.agility.value"
-      value="{{system.attributes.agility.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.magic_resonance.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.magic_resonance.value}}"
-      data-label="{{system.attributes.magic_resonance.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.magic_resonance.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.magic_resonance.value"
-      value="{{system.attributes.magic_resonance.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.agility  contextAttrMod=system.attributes.agility_mod attrName="agility"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.magic_resonance  contextAttrMod=system.attributes.magic_resonance_mod attrName="magic_resonance"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.reaction.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.reaction.value}}"
-      data-label="{{system.attributes.reaction.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.reaction.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.reaction.value"
-      value="{{system.attributes.reaction.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.reaction  contextAttrMod=system.attributes.reaction_mod attrName="reaction"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.initiative  attrName="initiative"}}
+  
+</div>
 
-    <label
-      for="system.attributes.initiative.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.initiative.value}}"
-      data-label="{{system.attributes.initiative.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.initiative.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.initiative.value"
-      value="{{system.attributes.initiative.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.strength  contextAttrMod=system.attributes.strength_mod attrName="strength"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.matrix_initiative  attrName="matrix_initiative"}}
+  
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.strength.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.strength.value}}"
-      data-label="{{system.attributes.strength.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.strength.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.strength.value"
-      value="{{system.attributes.strength.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.matrix_initiative.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.matrix_initiative.value}}"
-      data-label="{{system.attributes.matrix_initiative.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.matrix_initiative.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.matrix_initiative.value"
-      value="{{system.attributes.matrix_initiative.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.willpower  contextAttrMod=system.attributes.willpower_mod attrName="willpower"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.astral_initiative  attrName="astral_initiative"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.willpower.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.willpower.value}}"
-      data-label="{{system.attributes.willpower.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.willpower.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.willpower.value"
-      value="{{system.attributes.willpower.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.astral_initiative.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.astral_initiative.value}}"
-      data-label="{{system.attributes.astral_initiative.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.astral_initiative.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.astral_initiative.value"
-      value="{{system.attributes.astral_initiative.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.logic  contextAttrMod=system.attributes.logic_mod attrName="logic"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.composure  contextAttrMod=system.attributes.composure_mod attrName="composure"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.logic.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.logic.value}}"
-      data-label="{{system.attributes.logic.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.logic.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.logic.value"
-      value="{{system.attributes.logic.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.composure.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.composure.value}}"
-      data-label="{{system.attributes.composure.label}}"
-      title="{{localize 'SHADOWRUN6.Help.Composure'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.composure.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.composure.value"
-      value="{{system.attributes.composure.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.intuition  contextAttrMod=system.attributes.intuition_mod attrName="intuition"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.judge_intentions  contextAttrMod=system.attributes.judge_intentions_mod attrName="judge_intentions"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.intuition.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.intuition.value}}"
-      data-label="{{system.attributes.intuition.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.intuition.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.intuition.value"
-      value="{{system.attributes.intuition.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.charisma  contextAttrMod=system.attributes.charisma_mod attrName="charisma"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.memory  contextAttrMod=system.attributes.memory_mod attrName="memory"}}
 
-    <label
-      for="system.attributes.judge_intentions.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.judge_intentions.value}}"
-      data-label="{{system.attributes.judge_intentions.label}}"
-      title="{{localize 'SHADOWRUN6.Help.JudgeIntentions'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.judge_intentions.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.judge_intentions.value"
-      value="{{system.attributes.judge_intentions.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.charisma.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.charisma.value}}"
-      data-label="{{system.attributes.charisma.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.charisma.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.charisma.value"
-      value="{{system.attributes.charisma.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.memory.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.memory.value}}"
-      data-label="{{system.attributes.memory.label}}"
-      title="{{localize 'SHADOWRUN6.Help.Memory'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.memory.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.memory.value"
-      value="{{system.attributes.memory.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.edge  attrName="edge"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.lift_carry  contextAttrMod=system.attributes.lift_carry_mod attrName="lift_carry"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.edge.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.edge.value}}"
-      data-label="{{system.attributes.edge.label}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.edge.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.edge.value"
-      value="{{system.attributes.edge.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.lift_carry.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.lift_carry.value}}"
-      data-label="{{system.attributes.lift_carry.label}}"
-      title="{{localize 'SHADOWRUN6.Help.LiftCarry'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.lift_carry.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.lift_carry.value"
-      value="{{system.attributes.lift_carry.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.movement  attrName="movement"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.unarmed_ar  contextAttrMod=system.attributes.unarmed_ar_mod attrName="unarmed_ar"}}
   </div>
 
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.movement.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.movement.value}}"
-      data-label="{{system.attributes.movement.label}}"
-      >{{system.attributes.movement.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.movement.value"
-      value="{{system.attributes.movement.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
-
-    <label
-      for="system.attributes.unarmed_ar.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.unarmed_ar.value}}"
-      data-label="{{system.attributes.unarmed_ar.label}}"
-      title="{{localize 'SHADOWRUN6.Help.UnarmedArmor'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.unarmed_ar.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.unarmed_ar.value"
-      value="{{system.attributes.unarmed_ar.value}}"
-      data-dtype="String"
-      class="flex3"
-    />
-  </div>
-
-  <div class="flexrow grid grid-4col">
-    <label
-      for="system.attributes.defense_rating.value"
-      class="resource-label rolldialog align-left"
-      data-roll="{{system.attributes.defense_rating.value}}"
-      data-label="{{system.attributes.defense_rating.label}}"
-      title="{{localize 'SHADOWRUN6.Help.DefenseRatingSC'}}"
-      ><i class="fa-solid fa-dice-five" style="margin-top: 8px;"></i> {{system.attributes.defense_rating.label}}</label
-    >
-    <input
-      type="text"
-      name="system.attributes.defense_rating.value"
-      value="{{system.attributes.defense_rating.value}}"
-      data-dtype="Number"
-      class="flex3"
-    />
+  <div class="flexrow grid grid-2col">
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.defense_rating  contextAttrMod=system.attributes.defense_rating_mod attrName="defense_rating"}}
   </div>
 </div>

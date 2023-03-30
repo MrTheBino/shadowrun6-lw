@@ -41,6 +41,10 @@ You can reach me on Discord via MrTheBino#7878
 
 ## Changelog:
 
+### v0.4
+
+* added attribute modifiers for easier tracking of the base attributes
+* roll dialog for ranged & melee weapons
 ### v0.3
 
 * added UI improvements

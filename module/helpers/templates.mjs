@@ -23,5 +23,7 @@
     "systems/shadowrun6-lw/templates/actor/parts/actor-spells.html",
     "systems/shadowrun6-lw/templates/actor/parts/actor-effects.html",
     "systems/shadowrun6-lw/templates/actor/parts/actor-minion.html",
+    "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html",
+    "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html"
   ]);
 };

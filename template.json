@@ -40,7 +40,13 @@
         "unarmed_ar":{
           "value": 0
         },
+        "unarmed_ar_mod":{
+          "value": 0
+        },
         "magic_resonance":{
+          "value": 0
+        },
+        "magic_resonance_mod":{
           "value": 0
         },
         "matrix_initiative": {
@@ -52,43 +58,85 @@
         "composure": {
           "value": 0
         },
+        "composure_mod": {
+          "value": 0
+        },
         "judge_intentions": {
+          "value": 0
+        },
+        "judge_intentions_mod": {
           "value": 0
         },
         "memory": {
           "value": 0
         },
+        "memory_mod": {
+          "value": 0
+        },
         "lift_carry": {
+          "value": 0
+        },
+        "lift_carry_mod": {
           "value": 0
         },
         "defense_rating": {
           "value": 0
         },
+        "defense_rating_mod": {
+          "value": 0
+        },
         "body":{
+          "value": 0
+        },
+        "body_mod":{
           "value": 0
         },
         "agility":{
           "value": 0
         },
+        "agility_mod":{
+          "value": 0
+        },
         "reaction":{
+          "value": 0
+        },
+        "reaction_mod":{
           "value": 0
         },
         "strength":{
           "value": 0
         },
+        "strength_mod":{
+          "value": 0
+        },
         "willpower":{
+          "value": 0
+        },
+        "willpower_mod":{
           "value": 0
         },
         "logic":{
           "value": 0
         },
+        "logic_mod":{
+          "value": 0
+        },
         "intuition":{
+          "value": 0
+        },
+        "intuition_mod":{
           "value": 0
         },
         "charisma":{
           "value": 0
         },
+        "charisma_mod":{
+          "value": 0
+        },
         "movement": {
+          "value": 0
+        },
+        "movement_mod": {
           "value": 0
         },
         "initiative": {
@@ -269,7 +317,9 @@
       "weapon_r_middle": "",
       "weapon_r_far": "",
       "weapon_r_extreme": "",
-      "weapon_ammo": ""
+      "weapon_ammo": "",
+      "skill_attribute":"",
+      "gear_mod": 0
     },
     "armor": {
       "templates": ["base"],
@@ -292,7 +342,9 @@
     "melee_weapon": {
       "templates": ["base"],
       "weapon_damage": "",
-      "weapon_r_close": ""
+      "weapon_r_close": "",
+      "skill_attribute":"",
+      "gear_mod": 0
     },
     "quality": {
       "templates": ["base"],

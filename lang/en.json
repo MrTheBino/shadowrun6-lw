@@ -72,7 +72,8 @@
     "DicePoolMod": "Dice Pool Mod",
     "OpenRollDialog": "Open Roll Dialog",
     "Vehicle": "Vehicle",
-    "Minion": "Minion / NPC"
+    "Minion": "Minion / NPC",
+    "DicePoolShort": "DP"
   },
 
   "SHADOWRUN6.Actions":{
@@ -99,13 +100,18 @@
     "MatrixActionIllegal": "Logic + Cracken + Modifiers",
     "MagicCheck": "Magic + Witchcraft + Modifiers",
     "MagicDrainCheck": "(Willpower + Logic or Willpower + Charisma) + Modifiers",
-    "Composure": "Willpower + Charisma",
-    "JudgeIntentions": "Willpower + Intuition",
-    "Memory": "Logic + Intuition",
-    "LiftCarry": "Body + Willpower",
-    "UnarmedArmor": "Reaction + Strength",
-    "DefenseRatingSC": "Constitution + Armor + Mods",
-    "ShortDescription": "short description for the tooltip"
+    "ShortDescription": "short description for the tooltip",
+    "BaseValue": "base value",
+    "ModValue": "modifiers"
+  },
+
+  "SHADOWRUN6.AttrHelpTitle":{
+    "composure": "Willpower + Charisma",
+    "judge_intentions": "Willpower + Intuition",
+    "memory": "Logic + Intuition",
+    "lift_carry": "Body + Willpower",
+    "unarmed_armor": "Reaction + Strength",
+    "defense_rating": "Constitution + Armor + Mods"
   },
 
   "SHADOWRUN6.Titles":{
@@ -124,6 +130,7 @@
     "MeleeWeapons": "Melee Weapons",
     "Combat": "Combat",
     "Skills": "Skills",
+    "Skill": "Skill",
     "Attributes": "Attributes",
     "Magic": "Magic",
     "Character": "Character",
@@ -198,7 +205,8 @@
       "weapon_r_far": "Far",
       "weapon_r_extreme": "Extreme",
       "weapon_ammo": "Ammo",
-      "range": "Range"
+      "range": "Range",
+      "gear_mod": "Gear DP mod"
     },
     "MeleeWeapon":{
       "weapon_damage": "Damage",

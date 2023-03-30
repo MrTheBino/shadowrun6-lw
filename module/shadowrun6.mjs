@@ -85,6 +85,17 @@ Handlebars.registerHelper('localizeAttribute', function(str) {
   return game.i18n.localize(SHADOWRUN6.attributes_localization_matching[str]);
 });
 
+Handlebars.registerHelper('totalAttrVal', function(system,attr_name) {
+  if(system && "attr_"+attr_name+"_total" in system){
+    return system["attr_"+attr_name+"_total"]
+  }
+
+  /*console.log("--------- error totalAttrVal ---------");
+  console.log("attr_name: "+attr_name);
+  console.log(system);*/
+  return system.attributes[attr_name].value;
+});
+
 Handlebars.registerHelper('textNotEmpty', function(str) {
   if(str && str.length > 0){
     return true;
@@ -102,6 +113,10 @@ Handlebars.registerHelper('check', function(value,options) {
 
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
+Handlebars.registerHelper('doesNotInc', function(arg1, arg2, options) {
+  return (arg1.includes(arg2)) ? options.inverse(this) : options.fn(this);
 });
 
 /* -------------------------------------------- */
@@ -127,8 +142,6 @@ Hooks.once("ready", async function() {
     }
     return true;
    });
-
-   console.log(Object.keys(game.system.template.Actor.character.attributes));
 });
 
 /* -------------------------------------------- */

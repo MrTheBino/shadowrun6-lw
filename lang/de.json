@@ -68,7 +68,8 @@
     "DicePoolMod": "Würfelpoolmodifikator",
     "OpenRollDialog": "Würfel Dialog öffnen",
     "Vehicle": "Fahrzeug",
-    "Minion": "Scherge / NPC"
+    "Minion": "Scherge / NPC",
+    "DicePoolShort": "WP"
   },
 
   "SHADOWRUN6.MatrixEntity":{
@@ -100,6 +101,15 @@
     "ShortDescription": "kurze Beschreibung für den Tooltip"
   },
 
+  "SHADOWRUN6.AttrHelpTitle":{
+    "composure": "Willenskraft + Charisma",
+    "judge_intentions": "Willenskraft + Intuition",
+    "memory": "Logik + Intuition",
+    "lift_carry": "Konstitution + Willenskraft",
+    "unarmed_armor": "Reaktion + Stärke",
+    "defense_rating": "Konstitution + Panzerung + Mods"
+  },
+
   "SHADOWRUN6.Titles":{
     "MagicSpells": "Zauber / Erzeugnisse / Rituale / Komplexe Formen",
     "AdeptPowersAndOthers": "Adeptenkräfte & andere Fähigkeiten",
@@ -114,6 +124,7 @@
     "MeleeWeapons": "Nahkampfwaffen",
     "Combat": "Kampf",
     "Skills": "Fertigkeiten",
+    "Skill": "Fertigkeit",
     "Attributes": "Attribute",
     "Magic": "Magie",
     "Character": "Charakter",
@@ -186,7 +197,8 @@
       "weapon_r_extreme": "Sehr Fern",
       "weapon_ammo": "Munition",
       "name": "Waffe",
-      "range": "Reichweite"
+      "range": "Reichweite",
+      "gear_mod": "Würfelpoolmodifikator"
     },
     "MeleeWeapon":{
       "weapon_damage": "Schaden",

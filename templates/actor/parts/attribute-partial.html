@@ -1,0 +1,17 @@
+<div class="attribute_group flexrow">
+  <label
+    for="system.attributes.{{attrName}}.value"
+    class="resource-label rolldialog align-left"
+    data-roll="{{contextAttribute.value}}"
+    data-label="{{contextAttribute.label}}"
+    ><i class="fa-solid fa-dice-five" style="margin-top: 8px"></i>
+    {{contextAttribute.label}}</label
+  >
+  <input
+    type="text"
+    name="system.attributes.{{attrName}}.value"
+    value="{{contextAttribute.value}}"
+    data-dtype="Number"
+    class="flex1"
+  />
+</div>

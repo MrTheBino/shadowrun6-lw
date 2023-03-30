@@ -25,6 +25,8 @@ export class Shadowrun6Item extends Item {
     // things organized.
     this._prepareSkillData(itemData);
     this._prepareContactData(itemData);
+    this._prepareRangedWeaponData(itemData);
+    this._prepareMeleeWeaponData(itemData);
   }
 
   _prepareContactData(itemData){
@@ -32,8 +34,57 @@ export class Shadowrun6Item extends Item {
     const systemData = itemData.system;
 
     
-    itemData.system.contact_check = (itemData.actor.system.attributes.charisma.value + itemData.system.influence)
+    itemData.system.contact_check = (itemData.actor.system.attributes.charisma.value + itemData.actor.system.attributes.charisma_mod.value + itemData.system.influence)
     itemData.system.contact_check_mod = itemData.system.loyality
+  }
+
+  _prepareMeleeWeaponData(itemData){
+    if (itemData.type !== 'melee_weapon') return;
+    const systemData = itemData.system;
+    
+    if(itemData.system.skill_attribute){
+      let actor_skill = this._getActorSkill(itemData,itemData.system.skill_attribute);
+      itemData.system.melee_weapon_dice_pool_label = itemData.name + " (" + actor_skill.name + ")"
+
+      if(actor_skill){
+        let attr_name = actor_skill.system.skill_attribute;
+        if(attr_name+"_mod" in itemData.actor.system.attributes){
+          itemData.system.melee_weapon_dice_pool = actor_skill.system.skill_rank + itemData.actor.system.attributes[attr_name].value + itemData.actor.system.attributes[attr_name+"_mod"].value; 
+          }else{
+            itemData.system.melee_weapon_dice_pool = actor_skill.skill_rank + itemData.actor.system.attributes[attr_name].value; 
+          }
+      }
+    }
+  }
+
+  _prepareRangedWeaponData(itemData){
+    if (itemData.type !== 'ranged_weapon') return;
+    const systemData = itemData.system;
+    
+    if(itemData.system.skill_attribute){
+      let actor_skill = this._getActorSkill(itemData,itemData.system.skill_attribute);
+      itemData.system.ranged_weapon_dice_pool_label = itemData.name + " (" + actor_skill.name + ")"
+
+      if(actor_skill){
+        let attr_name = actor_skill.system.skill_attribute;
+        if(attr_name+"_mod" in itemData.actor.system.attributes){
+          itemData.system.ranged_weapon_dice_pool = actor_skill.system.skill_rank + itemData.actor.system.attributes[attr_name].value + itemData.actor.system.attributes[attr_name+"_mod"].value; 
+          }else{
+            itemData.system.ranged_weapon_dice_pool = actor_skill.skill_rank + itemData.actor.system.attributes[attr_name].value; 
+          }
+      }
+    }
+  }
+
+  _getActorSkill(itemData,name){
+    for (let i of itemData.actor.items) {
+      if (i.type === 'skill') {
+        if(i.name == name){
+          return i;
+        }
+      }
+    }
+    return false;
   }
 
   _prepareSkillData(itemData){
@@ -43,7 +94,12 @@ export class Shadowrun6Item extends Item {
     // auto calculate WP
     itemData.system.skill_wp = itemData.system.skill_rank;
     if(itemData.system.skill_attribute){
-      itemData.system.skill_wp = itemData.system.skill_rank + itemData.actor.system.attributes[itemData.system.skill_attribute].value;
+      if(itemData.system.skill_attribute+"_mod" in itemData.actor.system.attributes){
+          itemData.system.skill_wp = itemData.system.skill_rank + itemData.actor.system.attributes[itemData.system.skill_attribute].value + itemData.actor.system.attributes[itemData.system.skill_attribute+"_mod"].value; 
+      }else{
+        itemData.system.skill_wp = itemData.system.skill_rank + itemData.actor.system.attributes[itemData.system.skill_attribute].value; 
+      }
+      
     }
   }
 

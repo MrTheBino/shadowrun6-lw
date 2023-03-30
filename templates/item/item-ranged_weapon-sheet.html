@@ -149,6 +149,35 @@
           </div>
         </section>
       </div>
+      <div class="shadowrun6 styled_box">
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Titles.Skill'}}
+          </div>
+          <div class="flexcol">
+            <select class="" name="system.skill_attribute" data-type="String">
+              {{#select system.skill_attribute}} {{#each char_skills as
+                |skill key|}}
+                <option value="{{skill.name}}">{{skill.name}}</option>
+                {{/each}} {{/select}}
+            </select>
+          </div>
+        </section>
+
+        <section class="grid grid-2col">
+          <div class="flexcol">
+            {{localize 'SHADOWRUN6.Items.RangedWeapon.gear_mod'}}
+          </div>
+          <div class="flexcol">
+            <input
+              type="text"
+              name="system.gear_mod"
+              value="{{system.gear_mod}}"
+              data-dtype="String"
+            />
+          </div>
+        </section>
+      </div>
     </div>
 
     <div class="tab" data-group="primary" data-tab="description">

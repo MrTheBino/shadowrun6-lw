@@ -33,9 +33,9 @@
         {{#ifEquals skill_entry.system.skill_type
         "A"}}{{skill_entry.system.skill_rank}}{{/ifEquals}}
       </div>
-      <div class="item-skill-attribute">
+      <div class="item-skill-attribute flex2">
         {{#ifEquals skill_entry.system.skill_type "A"}} {{localizeAttribute
-        skill_entry.system.skill_attribute}} {{/ifEquals}}
+        skill_entry.system.skill_attribute}} ({{totalAttrVal ../system skill_entry.system.skill_attribute}}) {{/ifEquals}}
       </div>
       <div class="item-skill-type">
         {{#ifEquals skill_entry.system.skill_type
