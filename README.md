@@ -13,7 +13,7 @@ This system is completely Unofficial.
 * minion / npc sheet
 * vehicle sheet
 * basic matrix actor sheet
-* simple roll dialog and dice pool roll command
+* simple roll dialog and dice pool roll command to handle each possible situation in your game
 
 
 ## Translations:
@@ -57,4 +57,4 @@ You can reach me on Discord via MrTheBino#7878
 
 * first public release
 
-![alt text](shadowrun6-lw-0.3.png "Shadowrun 6 Leightweight Reference Image")
+![alt text](shadowrun6_v04.jpg "Shadowrun 6 Leightweight Reference Image")
