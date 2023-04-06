@@ -1,7 +1,7 @@
 <div class="shadowrun6 styled_box">
   <div class="flexrow grid grid-2col">
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.body  contextAttrMod=system.attributes.body_mod attrName="body"}}
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.essence  attrName="essence"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.essence  attrName="essence" dtype="Number"}}
     
   </div>
 
@@ -12,19 +12,19 @@
 
   <div class="flexrow grid grid-2col">
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.reaction  contextAttrMod=system.attributes.reaction_mod attrName="reaction"}}
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.initiative  attrName="initiative"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.initiative  attrName="initiative" dtype="String"}}
   
 </div>
 
   <div class="flexrow grid grid-2col">
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.strength  contextAttrMod=system.attributes.strength_mod attrName="strength"}}
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.matrix_initiative  attrName="matrix_initiative"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.matrix_initiative  attrName="matrix_initiative" dtype="String"}}
   
   </div>
 
   <div class="flexrow grid grid-2col">
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.willpower  contextAttrMod=system.attributes.willpower_mod attrName="willpower"}}
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.astral_initiative  attrName="astral_initiative"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.astral_initiative  attrName="astral_initiative" dtype="String"}}
   </div>
 
   <div class="flexrow grid grid-2col">
@@ -44,12 +44,12 @@
   </div>
 
   <div class="flexrow grid grid-2col">
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.edge  attrName="edge"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.edge  attrName="edge" dtype="Number"}}
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.lift_carry  contextAttrMod=system.attributes.lift_carry_mod attrName="lift_carry"}}
   </div>
 
   <div class="flexrow grid grid-2col">
-    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.movement  attrName="movement"}}
+    {{> "systems/shadowrun6-lw/templates/actor/parts/attribute-partial.html" contextAttribute=system.attributes.movement  attrName="movement" dtype="String"}}
     {{> "systems/shadowrun6-lw/templates/actor/parts/attribute_mods-partial.html" contextAttribute=system.attributes.unarmed_ar  contextAttrMod=system.attributes.unarmed_ar_mod attrName="unarmed_ar"}}
   </div>
 
