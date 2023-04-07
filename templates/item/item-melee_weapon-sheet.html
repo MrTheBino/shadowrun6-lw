@@ -72,9 +72,9 @@
           </div>
           <div class="flexcol">
             <select class="" name="system.skill_attribute" data-type="String">
-              {{#select system.skill_attribute}} {{#each char_skills as
-                |skill key|}}
-                <option value="{{skill.name}}">{{skill.name}}</option>
+              {{#select system.skill_attribute}} {{#each skill_selection as
+                |skill|}}
+                <option value="{{skill.name}}">{{skill.name_with_total_mod}}</option>
                 {{/each}} {{/select}}
             </select>
           </div>

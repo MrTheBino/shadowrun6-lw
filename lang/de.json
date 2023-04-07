@@ -85,7 +85,9 @@
   "SHADOWRUN6.Actions":{
     "DefenseCheck": "Verteidungsprobe",
     "MagicCheck": "Zauberprobe",
-    "MagicDrainCheck": "Entzug widerstehen"
+    "MagicDrainCheck": "Entzug widerstehen",
+    "MatrixActionLegal": "Legale Matrixhandlung",
+    "MatrixActionIllegal": "Illegale Matrixhandlung"
   },
 
   "SHADOWRUN6.Help":{

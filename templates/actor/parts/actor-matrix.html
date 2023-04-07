@@ -12,12 +12,11 @@
         'SHADOWRUN6.Actions.MatrixActionLegal'}} ({{system.matrix_legal_action_dp}})
         </span>
     </div>
-    <div class="flexcol"><span>{{system.attributes.logic.label}} ({{system.attributes.logic.value}})</span></div>
     <div class="flexcol">
         <select class="" name="system.matrix.matrix_attr_legal" data-type="String">
-          {{#select system.matrix.matrix_attr_legal}} {{#each skills as
+          {{#select system.matrix.matrix_attr_legal}} {{#each skill_selection as
             |skill key|}}
-            <option value="{{skill.name}}">{{skill.name}}</option>
+            <option value="{{skill.name}}">{{skill.name_with_total_mod}}</option>
             {{/each}} {{/select}}
         </select>
     </div>
@@ -34,12 +33,11 @@
         'SHADOWRUN6.Actions.MatrixActionIllegal'}} ({{system.matrix_illegal_action_dp}})
         </span>
     </div>
-    <div class="flexcol"><span>{{system.attributes.logic.label}} ({{system.attributes.logic.value}})</span></div>
     <div class="flexcol">
         <select class="" name="system.matrix.matrix_attr_illegal" data-type="String">
-          {{#select system.matrix.matrix_attr_illegal}} {{#each skills as
+          {{#select system.matrix.matrix_attr_illegal}} {{#each skill_selection as
             |skill key|}}
-            <option value="{{skill.name}}">{{skill.name}}</option>
+            <option value="{{skill.name}}">{{skill.name_with_total_mod}}</option>
             {{/each}} {{/select}}
         </select>
     </div>

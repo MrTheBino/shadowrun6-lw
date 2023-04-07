@@ -38,6 +38,7 @@ export class Shadowrun6ItemSheet extends ItemSheet {
     // Retrieve the roll data for TinyMCE editors.
     context.rollData = {};
     let actor = this.object?.parent ?? null;
+    context.actor = actor;
     if (actor) {
       context.rollData = actor.getRollData();
     }
@@ -48,24 +49,52 @@ export class Shadowrun6ItemSheet extends ItemSheet {
     context.system = itemData.system;
     context.flags = itemData.flags;
 
-    let t_atts = {}
-    for (const [key, value] of Object.entries(game.system.template.Actor.character.attributes)) {
-      if(!key.includes("_mod")){
-        t_atts[key] = value
-      }
-    }
-
+    this._preapreAttributesForSelect(context);
+    this._prepareSkillsForSelect(context);
     const t_skills = [];
     for (let i of actor.items) {
       if (i.type === 'skill') {
+        console.log(i);
         t_skills.push(i);
       }
     }
-    context.char_skills = t_skills;
-    context.char_attributes  = t_atts
+
     context.char_skill_types = {A:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.attribute')},K:{label: game.i18n.localize('SHADOWRUN6.Items.Skill.skill_types.long.knowledge')}};
     
     return context;
+  }
+
+  _preapreAttributesForSelect(context){
+    context.attribute_selection = [];
+    let ignored_attributes = ["edge","matrix_initiative","astral_initiative","initiative","essence"];
+
+    for (let [k, s_attr] of  Object.entries(context.actor.system.attributes)) {
+      if(k.includes("_mod") || ignored_attributes.includes(k)) continue;
+
+      let v = {}
+      v.key = k;
+      v.label = game.i18n.localize(CONFIG.SHADOWRUN6.attributes[k]) ?? k;
+      v.helpTitle = game.i18n.localize("SHADOWRUN6.AttrHelpTitle."+ k) ?? k;
+      v.attr_value = parseInt(s_attr.value);
+      v.attr_mod_value = parseInt(context.actor.system.attributes[k+"_mod"].value);
+      v.attr_total_value = v.attr_value + v.attr_mod_value;
+      v.label_with_total_mod = v.label  + " (" + game.i18n.localize("SHADOWRUN6.Labels.DicePoolShort") + " " + v.attr_total_value + ")";
+      context.attribute_selection.push(v);
+    }
+  }
+  _prepareSkillsForSelect(context){
+    context.skill_selection = []
+      
+    for(let skill of context.actor.items){
+      if (skill.type === 'skill' && skill.system.skill_type == "A") {
+        let t = {}
+        console.log(skill);
+        t.name = skill.name;
+     
+        t.name_with_total_mod = skill.name + " (" + game.i18n.localize("SHADOWRUN6.Labels.DicePoolShort") + " " + skill.system.skill_wp + ")";
+        context.skill_selection.push(t);
+      }
+    }
   }
 
   /* -------------------------------------------- */

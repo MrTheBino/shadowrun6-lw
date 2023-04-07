@@ -47,6 +47,8 @@ export class Shadowrun6ActorSheet extends ActorSheet {
       this._prepareItems(context);
       this._prepareCharacterData(context);
       this._prepareCalculations(context);
+      this._prepareSkillsForSelect(context);
+      this._preapreAttributesForSelect(context);
     }
 
     // Prepare NPC data and items.
@@ -61,6 +63,35 @@ export class Shadowrun6ActorSheet extends ActorSheet {
     context.effects = prepareActiveEffectCategories(this.actor.effects);
 
     return context;
+  }
+
+  _preapreAttributesForSelect(context){
+    context.attribute_selection = [];
+    let ignored_attributes = ["edge","matrix_initiative","astral_initiative","initiative","essence"];
+
+    for (let [k, s_attr] of Object.entries(context.system.attributes)) {
+      if(k.includes("_mod") || ignored_attributes.includes(k)) continue;
+
+      let v = {}
+      v.key = k;
+      v.label = game.i18n.localize(CONFIG.SHADOWRUN6.attributes[k]) ?? k;
+      v.helpTitle = game.i18n.localize("SHADOWRUN6.AttrHelpTitle."+ k) ?? k;
+      v.attr_value = parseInt(s_attr.value);
+      v.attr_mod_value = parseInt(context.system.attributes[k+"_mod"].value);
+      v.attr_total_value = v.attr_value + v.attr_mod_value;
+      v.label_with_total_mod = v.label  + " (" + game.i18n.localize("SHADOWRUN6.Labels.DicePoolShort") + " " + v.attr_total_value + ")";
+      context.attribute_selection.push(v);
+    }
+  }
+  _prepareSkillsForSelect(context){
+    context.skill_selection = []
+    for(let skill of context.skills){
+      let t = {}
+      t.name = skill.name;
+   
+      t.name_with_total_mod = skill.name + " (" + game.i18n.localize("SHADOWRUN6.Labels.DicePoolShort") + " " + skill.system.skill_wp + ")";
+      context.skill_selection.push(t);
+    }
   }
 
   _prepareCalculations(context){

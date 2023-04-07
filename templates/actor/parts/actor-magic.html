@@ -12,12 +12,12 @@
         'SHADOWRUN6.Actions.MagicCheck'}} ({{system.magic_spell_check_dp}})
         </span>
     </div>
-    <div class="flexcol"><span>{{system.attributes.magic_resonance.label}}</span></div>
+    <div class="flexcol"><span> </span></div>
     <div class="flexcol">
         <select class="" name="system.magic.spell_check_skill" data-type="String">
-          {{#select system.magic.spell_check_skill}} {{#each skills as
+          {{#select system.magic.spell_check_skill}} {{#each skill_selection as
             |skill key|}}
-            <option value="{{skill.name}}">{{skill.name}}</option>
+            <option value="{{skill.name}}">{{skill.name_with_total_mod}}</option>
             {{/each}} {{/select}}
         </select>
     </div>
@@ -35,14 +35,12 @@
         'SHADOWRUN6.Actions.MagicDrainCheck'}} ({{system.drain_check_dp}})
         </span>
     </div>
-    <div class="flexcol"><span>{{system.attributes.willpower.label}}</span></div>
+    <div class="flexcol"><span>{{system.attributes.willpower.label}} + </span></div>
     <div class="flexcol">
         <select class="" name="system.magic.drain_check_skill" data-type="String">
-          {{#select system.magic.drain_check_skill}} {{#each system.attributes as
-            |attr key|}}
-              {{#doesNotInc key '_mod'}}
-                <option value="{{key}}">{{attr.label}}</option>
-              {{/doesNotInc}}
+          {{#select system.magic.drain_check_skill}} {{#each attribute_selection as
+            |attr|}}
+              <option value="{{attr.key}}">{{attr.label_with_total_mod}}</option>
             {{/each}}
           {{/select}}
         </select>
